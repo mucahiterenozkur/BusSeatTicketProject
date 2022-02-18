@@ -172,14 +172,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95g-6s-fDT">
-                                                    <rect key="frame" x="43" y="54" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95g-6s-fDT">
+                                                    <rect key="frame" x="43.5" y="54" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="95g-6s-fDT" firstAttribute="centerX" secondItem="z0d-zw-XcJ" secondAttribute="centerX" id="mWI-Bw-x27"/>
+                                                <constraint firstItem="95g-6s-fDT" firstAttribute="centerY" secondItem="z0d-zw-XcJ" secondAttribute="centerY" id="rFq-qs-TQy"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="seatNumber" destination="95g-6s-fDT" id="D50-Oy-Q7p"/>
@@ -207,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4b-vb-2GT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="110"/>
+            <point key="canvasLocation" x="2679.7101449275365" y="109.82142857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cbi-hi-mlC">
