@@ -10,5 +10,5 @@ import UIKit
 class SeatCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var seatNumber: UILabel!
-    
+    @IBOutlet weak var imageView: UIImageView!
 }

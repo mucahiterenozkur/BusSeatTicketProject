@@ -22,6 +22,7 @@ class SeatViewController: UIViewController {
     var busSeatNumDict = [Int : String]()
     var pathWayNumber = Int()
     var seatNumer = Int()
+
     
     
     override func viewDidLoad() {
@@ -84,16 +85,21 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             
             let text = busSeatNumDict[indexPath.row]
             
-            cell.layer.borderColor = UIColor.black.cgColor
-            cell.layer.borderWidth = 2
-            cell.layer.cornerRadius = 8
+            //cell.layer.borderColor = UIColor.black.cgColor
+            //cell.layer.borderWidth = 2
+           // cell.layer.cornerRadius = 8
+            cell.imageView.image = UIImage(named: "seat")
 
             if isSold(seatNumber: indexPath.row + 1){
-                cell.backgroundColor = .gray
+                //cell.backgroundColor = .gray
+                cell.imageView.image = UIImage(named: "grayseat")
+                
             } else if isSelected(seatNumber: indexPath.row + 1){
-                cell.backgroundColor = .green
+                //cell.backgroundColor = .green
+                cell.imageView.image = UIImage(named: "greenseat")
             } else {
-                cell.backgroundColor = .white
+                //cell.backgroundColor = .white
+                cell.imageView.image = UIImage(named: "seat")
             }
 
             cell.seatNumber.text = text
@@ -115,21 +121,23 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.cellForItem(at: indexPath)
-        if cell?.backgroundColor == .white {
+        let cell = collectionView.cellForItem(at: indexPath) as? SeatCollectionViewCell //to reach cell
+        if cell?.imageView.image == UIImage(named: "seat") {
             
             if emptySeatOperations(index: indexPath.row){
-                cell?.backgroundColor = .green
+                //cell?.backgroundColor = .green
+                cell?.imageView.image = UIImage(named: "greenseat")
             }
             
-        } else if cell?.backgroundColor == .gray {
+        } else if cell?.imageView.image == UIImage(named: "grayseat") {
             
             makeAlert(title: "Sold!", message: "This seat has been sold.")
             
         } else {
             
             if selectedSeatOperations(index: indexPath.row) {
-                cell?.backgroundColor = .white
+                //cell?.backgroundColor = .white
+                cell?.imageView.image = UIImage(named: "seat")
             }
             
         }

@@ -172,6 +172,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Lk-D3-FtA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95g-6s-fDT">
                                                     <rect key="frame" x="43.5" y="54" width="41.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -180,11 +183,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="0Lk-D3-FtA" firstAttribute="centerX" secondItem="z0d-zw-XcJ" secondAttribute="centerX" id="1dL-Dy-GHt"/>
+                                                <constraint firstItem="0Lk-D3-FtA" firstAttribute="top" secondItem="z0d-zw-XcJ" secondAttribute="top" id="Ekt-l9-hhO"/>
+                                                <constraint firstItem="0Lk-D3-FtA" firstAttribute="centerY" secondItem="z0d-zw-XcJ" secondAttribute="centerY" id="Qr8-Vf-HVN"/>
+                                                <constraint firstItem="0Lk-D3-FtA" firstAttribute="leading" secondItem="z0d-zw-XcJ" secondAttribute="leading" id="iFY-o8-bcL"/>
                                                 <constraint firstItem="95g-6s-fDT" firstAttribute="centerX" secondItem="z0d-zw-XcJ" secondAttribute="centerX" id="mWI-Bw-x27"/>
                                                 <constraint firstItem="95g-6s-fDT" firstAttribute="centerY" secondItem="z0d-zw-XcJ" secondAttribute="centerY" id="rFq-qs-TQy"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="imageView" destination="0Lk-D3-FtA" id="kJh-u3-S25"/>
                                             <outlet property="seatNumber" destination="95g-6s-fDT" id="D50-Oy-Q7p"/>
                                         </connections>
                                     </collectionViewCell>
