@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SeferlerViewController: ViewController {
+class SeferlerViewController: UIViewController {
     
     
     @IBOutlet var tableView: UITableView!
@@ -53,6 +53,15 @@ extension SeferlerViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "seferCell", for: indexPath) as! SeferCell
         cell.configure(model: seferler[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let st = UIStoryboard(name: "Main", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "SeatViewController") as! SeatViewController
+        
+        print("Cell \(indexPath.row + 1) clicked")
+        self.navigationController?.pushViewController(vc, animated: true)
+            
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

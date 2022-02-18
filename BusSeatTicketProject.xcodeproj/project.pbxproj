@@ -23,6 +23,8 @@
 		A8CD13F227BC437100296478 /* Tarih.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F127BC437100296478 /* Tarih.swift */; };
 		A8CD13F427BC441900296478 /* Saat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F327BC441900296478 /* Saat.swift */; };
 		A8CD13F827BC450300296478 /* BilgiVerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F727BC450300296478 /* BilgiVerProtocol.swift */; };
+		A8F8F4FE27BFB46C00D40185 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */; };
+		A8F8F50227BFB9C800D40185 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		A8CD13F127BC437100296478 /* Tarih.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarih.swift; sourceTree = "<group>"; };
 		A8CD13F327BC441900296478 /* Saat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saat.swift; sourceTree = "<group>"; };
 		A8CD13F727BC450300296478 /* BilgiVerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilgiVerProtocol.swift; sourceTree = "<group>"; };
+		A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
+		A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				A8CD13D727BC3D6600296478 /* SceneDelegate.swift */,
 				A8CD13D927BC3D6600296478 /* ViewController.swift */,
 				A80A04CC27BD1D51005A198B /* SeferlerViewController.swift */,
+				A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */,
+				A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */,
 				A8CD13DB27BC3D6600296478 /* Main.storyboard */,
 				A8CD13E127BC3D6600296478 /* Assets.xcassets */,
 				A8CD13E327BC3D6600296478 /* LaunchScreen.storyboard */,
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8CD13DA27BC3D6600296478 /* ViewController.swift in Sources */,
+				A8F8F50227BFB9C800D40185 /* SeatCollectionViewCell.swift in Sources */,
 				A8CD13E027BC3D6600296478 /* BusSeatTicketProject.xcdatamodeld in Sources */,
 				A8CD13F827BC450300296478 /* BilgiVerProtocol.swift in Sources */,
 				A8CD13F027BC425400296478 /* Yolcu.swift in Sources */,
@@ -203,6 +210,7 @@
 				A8CD13F227BC437100296478 /* Tarih.swift in Sources */,
 				A8CD13EE27BC3E9C00296478 /* Bilet.swift in Sources */,
 				A8CD13F427BC441900296478 /* Saat.swift in Sources */,
+				A8F8F4FE27BFB46C00D40185 /* SeatViewController.swift in Sources */,
 				A8CD13D827BC3D6600296478 /* SceneDelegate.swift in Sources */,
 				A80A04D827BD2691005A198B /* SeferCell.swift in Sources */,
 			);
