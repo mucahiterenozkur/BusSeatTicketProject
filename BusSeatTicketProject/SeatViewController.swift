@@ -13,10 +13,15 @@ class SeatViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    private var toplamKoltukSayisi = 45
+    private var toplamKoltukSayisi = 55
     private var satilanKoltuklar: [Int] = []
     var yeniSatilanKoltuklar: [Int] = []
     var secilenKoltuklar: [Int] = []
+    
+    
+    var busSeatNumDict = [Int : String]()
+    var pathWayNumber = Int()
+    var seatNumer = Int()
     
     
     override func viewDidLoad() {
@@ -24,6 +29,32 @@ class SeatViewController: UIViewController {
 
 //        collectionView.dataSource = self (did it from code)
 //        collectionView.delegate = self (did it from code)
+        
+        pathWayNumber = 2 // CENTER - PASSENGER CAN WALK
+        seatNumer = 1  // STARTING NUMBER
+        for i in 0...toplamKoltukSayisi{
+            
+            if i == pathWayNumber // If it s centre, values empty to dictionary
+            {
+                if i == 52 {
+                    busSeatNumDict[i] = String(seatNumer)
+                    seatNumer = seatNumer + 1
+                }else {
+                    busSeatNumDict[i] = ""
+                    pathWayNumber = pathWayNumber + 5 // Position empty - 2,7,12,17,22 ...... like that
+                }
+                
+                
+            }
+                
+            else
+            {
+                busSeatNumDict[i] = String(seatNumer)
+                seatNumer = seatNumer + 1
+            }
+
+        }
+        
     }
     
     
@@ -45,14 +76,18 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
         return toplamKoltukSayisi
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seatCell", for: indexPath) as? SeatCollectionViewCell{
 
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seatCell", for: indexPath) as? SeatCollectionViewCell{
+            
+            let text = busSeatNumDict[indexPath.row]
+            
             cell.layer.borderColor = UIColor.black.cgColor
             cell.layer.borderWidth = 2
             cell.layer.cornerRadius = 8
-            
+
             if isSold(seatNumber: indexPath.row + 1){
                 cell.backgroundColor = .gray
             } else if isSelected(seatNumber: indexPath.row + 1){
@@ -60,15 +95,21 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             } else {
                 cell.backgroundColor = .white
             }
+
+            cell.seatNumber.text = text
+            if /*busSeatNumDict[indexPath.row] == "2" ||*/ text == "" {
+                cell.contentView.alpha = 0
+                cell.layer.borderColor = UIColor.white.cgColor
+                cell.isUserInteractionEnabled = false
+            }
             
-            cell.seatNumber.text = String(indexPath.row + 1)
 
             return cell
-            
+
         } else {
-            
+
             return UICollectionViewCell()
-            
+
         }
     }
     
@@ -117,8 +158,8 @@ extension SeatViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width: CGFloat = (self.view.frame.width / 5)
-        let height: CGFloat = (self.view.frame.width / 5)
+        let width: CGFloat = (self.view.frame.width / 7)
+        let height: CGFloat = (self.view.frame.width / 7)
         
         return CGSize(width: width, height: height)
     }
