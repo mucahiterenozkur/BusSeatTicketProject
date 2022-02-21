@@ -278,6 +278,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Satın Al"/>
+                                <connections>
+                                    <action selector="buyTickets:" destination="Gjc-P5-NlR" eventType="touchUpInside" id="neD-Ub-Flw"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seat" translatesAutoresizingMaskIntoConstraints="NO" id="Zo9-yh-nSI">
                                 <rect key="frame" x="13" y="61" width="64" height="64"/>
@@ -350,6 +353,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4b-vb-2GT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2679.7101449275365" y="109.82142857142857"/>
+        </scene>
+        <!--Display Ticket View Controller-->
+        <scene sceneID="jmP-oF-tnp">
+            <objects>
+                <viewController storyboardIdentifier="DisplayTicketViewController" id="mXc-u9-Fg5" customClass="DisplayTicketViewController" customModule="BusSeatTicketProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zSl-QS-2Q4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TYB-pe-eHM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhx-Xn-ECA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3509" y="110"/>
         </scene>
     </scenes>
     <resources>

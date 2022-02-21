@@ -71,6 +71,16 @@ class SeatViewController: UIViewController {
         collectionView.reloadData()
     }
     
+    
+    @IBAction func buyTickets(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DisplayTicketViewController") as! DisplayTicketViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
 
 }
 

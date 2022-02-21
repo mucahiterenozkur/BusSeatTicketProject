@@ -19,7 +19,7 @@ class StartScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        backgroundImageView.image = UIImage(named: "landscape")
+        backgroundImageView.image = UIImage(named: "world")
         bottomView.backgroundColor = .white
         bottomView.layer.cornerRadius = 30
         
