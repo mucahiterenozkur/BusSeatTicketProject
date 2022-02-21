@@ -225,7 +225,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zq2-3i-iRa">
-                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <rect key="frame" x="5" y="144" width="404" height="618"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u3Z-P9-ez9">
                                     <size key="itemSize" width="128" height="128"/>
@@ -271,14 +271,76 @@
                                     <outlet property="delegate" destination="Gjc-P5-NlR" id="Zof-qT-J6V"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-qx-9vg">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uFH-aO-hVk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Satın Al"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seat" translatesAutoresizingMaskIntoConstraints="NO" id="Zo9-yh-nSI">
+                                <rect key="frame" x="13" y="61" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nD0-GC-qBs">
+                                <rect key="frame" x="85" y="61" width="45" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Boş">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oj-Uz-yO5">
+                                <rect key="frame" x="210" y="61" width="45" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Dolu">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2m-5O-osa">
+                                <rect key="frame" x="335" y="61" width="67" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Seçilen">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayseat" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-Rn-gTc">
+                                <rect key="frame" x="138" y="61" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenseat" translatesAutoresizingMaskIntoConstraints="NO" id="gfs-ac-yZK">
+                                <rect key="frame" x="263" y="61" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CdX-Q4-Hke"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="bottom" secondItem="Zq2-3i-iRa" secondAttribute="bottom" constant="20" id="K8s-zh-r7B"/>
-                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="trailing" secondItem="Zq2-3i-iRa" secondAttribute="trailing" constant="20" id="Q5M-dO-n4Y"/>
-                            <constraint firstItem="Zq2-3i-iRa" firstAttribute="leading" secondItem="CdX-Q4-Hke" secondAttribute="leading" constant="20" id="dfM-Aa-ITB"/>
-                            <constraint firstItem="Zq2-3i-iRa" firstAttribute="top" secondItem="CdX-Q4-Hke" secondAttribute="top" constant="20" id="q4Z-q9-Jrt"/>
+                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="bottom" secondItem="Unw-qx-9vg" secondAttribute="bottom" constant="20" id="DmB-sw-qPc"/>
+                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="bottom" secondItem="Zq2-3i-iRa" secondAttribute="bottom" constant="100" id="K8s-zh-r7B"/>
+                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="trailing" secondItem="Unw-qx-9vg" secondAttribute="trailing" constant="20" id="L8y-sW-uFE"/>
+                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="trailing" secondItem="Zq2-3i-iRa" secondAttribute="trailing" constant="5" id="Q5M-dO-n4Y"/>
+                            <constraint firstItem="Zq2-3i-iRa" firstAttribute="leading" secondItem="CdX-Q4-Hke" secondAttribute="leading" constant="5" id="dfM-Aa-ITB"/>
+                            <constraint firstItem="Unw-qx-9vg" firstAttribute="leading" secondItem="CdX-Q4-Hke" secondAttribute="leading" constant="20" id="kVy-P3-M4I"/>
+                            <constraint firstItem="Zq2-3i-iRa" firstAttribute="top" secondItem="CdX-Q4-Hke" secondAttribute="top" constant="100" id="q4Z-q9-Jrt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -291,6 +353,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="grayseat" width="64" height="64"/>
+        <image name="greenseat" width="64" height="64"/>
+        <image name="seat" width="64" height="64"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -17,6 +17,7 @@ class SeferCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         print("cell is created")
     }
 
