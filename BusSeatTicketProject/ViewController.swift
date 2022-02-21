@@ -42,7 +42,9 @@ class ViewController: UIViewController {
         destinationSearchBar.delegate = self
         
         departureSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
+        departureSearchBar.backgroundImage = UIImage()
         destinationSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
+        destinationSearchBar.backgroundImage = UIImage()
         tableView.backgroundColor = UIColor(hexString: "#64F5C5")
         tableView.separatorColor = UIColor(hexString: "#64F5C5")
         
