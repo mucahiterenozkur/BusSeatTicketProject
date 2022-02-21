@@ -11,6 +11,7 @@
 		A80A04D527BD261B005A198B /* SeferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A04D427BD261B005A198B /* SeferModel.swift */; };
 		A80A04D827BD2691005A198B /* SeferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A04D627BD2691005A198B /* SeferCell.swift */; };
 		A80A04D927BD2691005A198B /* SeferCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80A04D727BD2691005A198B /* SeferCell.xib */; };
+		A873009127C3BACD00CE7A39 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A873009027C3BACD00CE7A39 /* StartScreenViewController.swift */; };
 		A8CD13D627BC3D6600296478 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D527BC3D6600296478 /* AppDelegate.swift */; };
 		A8CD13D827BC3D6600296478 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D727BC3D6600296478 /* SceneDelegate.swift */; };
 		A8CD13DA27BC3D6600296478 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13D927BC3D6600296478 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 		A80A04D427BD261B005A198B /* SeferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferModel.swift; sourceTree = "<group>"; };
 		A80A04D627BD2691005A198B /* SeferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferCell.swift; sourceTree = "<group>"; };
 		A80A04D727BD2691005A198B /* SeferCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeferCell.xib; sourceTree = "<group>"; };
+		A873009027C3BACD00CE7A39 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		A8CD13D227BC3D6600296478 /* BusSeatTicketProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusSeatTicketProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8CD13D527BC3D6600296478 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8CD13D727BC3D6600296478 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A8CD13EC27BC3E7F00296478 /* Structs */,
 				A8CD13D527BC3D6600296478 /* AppDelegate.swift */,
 				A8CD13D727BC3D6600296478 /* SceneDelegate.swift */,
+				A873009027C3BACD00CE7A39 /* StartScreenViewController.swift */,
 				A8CD13D927BC3D6600296478 /* ViewController.swift */,
 				A80A04CC27BD1D51005A198B /* SeferlerViewController.swift */,
 				A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */,
@@ -208,6 +211,7 @@
 				A80A04CD27BD1D51005A198B /* SeferlerViewController.swift in Sources */,
 				A8CD13D627BC3D6600296478 /* AppDelegate.swift in Sources */,
 				A8CD13F227BC437100296478 /* Tarih.swift in Sources */,
+				A873009127C3BACD00CE7A39 /* StartScreenViewController.swift in Sources */,
 				A8CD13EE27BC3E9C00296478 /* Bilet.swift in Sources */,
 				A8CD13F427BC441900296478 /* Saat.swift in Sources */,
 				A8F8F4FE27BFB46C00D40185 /* SeatViewController.swift in Sources */,

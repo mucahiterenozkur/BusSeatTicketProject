@@ -60,8 +60,9 @@ extension SeferlerViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = st.instantiateViewController(withIdentifier: "SeatViewController") as! SeatViewController
         
         print("Cell \(indexPath.row + 1) clicked")
-        self.navigationController?.pushViewController(vc, animated: true)
-            
+        //self.navigationController?.pushViewController(vc, animated: true)
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
