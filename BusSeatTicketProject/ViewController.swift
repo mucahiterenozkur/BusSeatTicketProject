@@ -9,10 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var neredenGidecek: UILabel!
-    @IBOutlet weak var nereyeGidecek: UILabel!
-    @IBOutlet weak var tarihSaatLabel: UILabel!
+
+    @IBOutlet weak var busImageView: UIImageView!
     @IBOutlet weak var neredenGidecekTField: UITextField!
     @IBOutlet weak var nereyeGidecekTField: UITextField!
     
@@ -23,14 +21,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //title = "."
-        view.backgroundColor = UIColor(hexString: "#64F5C5")
+        view.backgroundColor = UIColor(hexString: "#64F5C5")        
+        busImageView.image = UIImage(named: "person")
         
-        neredenGidecek?.text = "Nereden hareket edeceksiniz?"
-        nereyeGidecek?.text = "Nereye gideceksiniz?"
-        tarihSaatLabel?.text = "Tarih ve saat seçiminiz nedir?"
-        
-        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
-        imageView?.layer.cornerRadius = 30
+//        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
+//        imageView?.layer.cornerRadius = 30
         //imageView.isHidden = true
 
         
@@ -38,16 +33,23 @@ class ViewController: UIViewController {
     
     
     @IBAction func seferleriGor(_ sender: Any) {
-        self.cikisNoktasi = neredenGidecekTField.text!
-        self.varisNoktasi = nereyeGidecekTField.text!
-        performSegue(withIdentifier: "seferler", sender: self)
+//        self.cikisNoktasi = neredenGidecekTField.text!
+//        self.varisNoktasi = nereyeGidecekTField.text!
+//        performSegue(withIdentifier: "seferler", sender: self)
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SeferlerViewController") as! SeferlerViewController
+        vc.cikis = neredenGidecekTField.text!
+        vc.varis = nereyeGidecekTField.text!
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .flipHorizontal
+        present(vc, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        var vc = segue.destination as! SeferlerViewController
-        vc.cikis = self.cikisNoktasi
-        vc.varis = self.varisNoktasi
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//        var vc = segue.destination as! SeferlerViewController
+//        vc.cikis = self.cikisNoktasi
+//        vc.varis = self.varisNoktasi
+//    }
     
 
 }
