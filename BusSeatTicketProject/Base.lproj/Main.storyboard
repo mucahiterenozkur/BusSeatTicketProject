@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -98,16 +99,10 @@
                                     <constraint firstAttribute="height" constant="285" id="Dzl-my-7Eu"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nereden yola çıkacaksınız?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0x1-cj-EMl">
-                                <rect key="frame" x="20" y="349" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nereye gideceksiniz?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jg2-Ep-CxL">
-                                <rect key="frame" x="20" y="403" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="qtk-3u-gYK">
+                                <rect key="frame" x="20" y="476" width="374" height="31"/>
+                                <locale key="locale" localeIdentifier="tr_TR"/>
+                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7au-2K-zse">
                                 <rect key="frame" x="50" y="751" width="314" height="61"/>
                                 <constraints>
@@ -119,36 +114,60 @@
                                     <action selector="seferleriGor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfZ-U0-jbf"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="30" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="qtk-3u-gYK">
-                                <rect key="frame" x="20" y="457" width="374" height="31"/>
-                                <locale key="locale" localeIdentifier="tr_TR"/>
-                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bz9-Up-qOR">
+                                <rect key="frame" x="20" y="527" width="374" height="214"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" id="AfX-jS-TTy">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AfX-jS-TTy" id="txt-a8-zfQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Nereden gideceksiniz?" translatesAutoresizingMaskIntoConstraints="NO" id="6D0-K2-uTj">
+                                <rect key="frame" x="20" y="349" width="374" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <searchBar tag="1" contentMode="redraw" placeholder="Nereye gideceksiniz?" translatesAutoresizingMaskIntoConstraints="NO" id="qef-NN-kZr">
+                                <rect key="frame" x="20" y="405" width="374" height="51"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0x1-cj-EMl" firstAttribute="top" secondItem="u7Y-Pq-cYJ" secondAttribute="bottom" constant="20" id="1Oz-G8-aqb"/>
-                            <constraint firstItem="qtk-3u-gYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="47L-RF-ldT"/>
-                            <constraint firstItem="Jg2-Ep-CxL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="48u-OO-EHv"/>
-                            <constraint firstItem="0x1-cj-EMl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6Eh-eQ-9xh"/>
-                            <constraint firstItem="Jg2-Ep-CxL" firstAttribute="top" secondItem="0x1-cj-EMl" secondAttribute="bottom" constant="20" id="7Py-04-iUb"/>
                             <constraint firstItem="7au-2K-zse" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="9mh-be-ppa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7au-2K-zse" secondAttribute="bottom" constant="50" id="GJw-jU-yTl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qtk-3u-gYK" secondAttribute="trailing" constant="20" id="Pfr-BT-hL3"/>
+                            <constraint firstItem="6D0-K2-uTj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MKS-FB-rKG"/>
+                            <constraint firstItem="qef-NN-kZr" firstAttribute="top" secondItem="6D0-K2-uTj" secondAttribute="bottom" constant="5" id="ML4-8q-O9t"/>
+                            <constraint firstItem="7au-2K-zse" firstAttribute="top" secondItem="Bz9-Up-qOR" secondAttribute="bottom" constant="10" id="Vay-Co-xNH"/>
                             <constraint firstItem="u7Y-Pq-cYJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xdw-TU-diD"/>
+                            <constraint firstItem="Bz9-Up-qOR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ze5-BE-t6t"/>
+                            <constraint firstItem="qtk-3u-gYK" firstAttribute="top" secondItem="qef-NN-kZr" secondAttribute="bottom" constant="20" id="aAR-2A-Hd4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7au-2K-zse" secondAttribute="trailing" constant="50" id="b1n-LO-TQO"/>
-                            <constraint firstItem="qtk-3u-gYK" firstAttribute="top" secondItem="Jg2-Ep-CxL" secondAttribute="bottom" constant="20" id="cuR-LZ-w2f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jg2-Ep-CxL" secondAttribute="trailing" constant="20" id="gKS-ce-aXz"/>
+                            <constraint firstItem="6D0-K2-uTj" firstAttribute="top" secondItem="u7Y-Pq-cYJ" secondAttribute="bottom" constant="20" id="giH-s4-89F"/>
                             <constraint firstItem="u7Y-Pq-cYJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ieY-Xz-TWU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0x1-cj-EMl" secondAttribute="trailing" constant="20" id="u4J-xB-VXC"/>
+                            <constraint firstItem="qtk-3u-gYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jaz-Aq-Lce"/>
+                            <constraint firstItem="Bz9-Up-qOR" firstAttribute="top" secondItem="qtk-3u-gYK" secondAttribute="bottom" constant="20" id="n3Y-nb-Nwq"/>
+                            <constraint firstItem="6D0-K2-uTj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="nBF-Ol-kAX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qtk-3u-gYK" secondAttribute="trailing" constant="20" id="p0p-ab-mCO"/>
+                            <constraint firstItem="qef-NN-kZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="peZ-S2-gl6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bz9-Up-qOR" secondAttribute="trailing" constant="20" id="rH5-fL-gcS"/>
                             <constraint firstItem="u7Y-Pq-cYJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vGF-na-4R5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qef-NN-kZr" secondAttribute="trailing" constant="20" id="xzI-DT-StP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7cF-lx-k2M"/>
                     <connections>
                         <outlet property="busImageView" destination="u7Y-Pq-cYJ" id="T8P-u8-wKG"/>
-                        <outlet property="neredenGidecekTField" destination="0x1-cj-EMl" id="jcG-0c-aJo"/>
-                        <outlet property="nereyeGidecekTField" destination="Jg2-Ep-CxL" id="7Wy-DE-8nC"/>
+                        <outlet property="departureSearchBar" destination="6D0-K2-uTj" id="Lwc-ez-nAG"/>
+                        <outlet property="destinationSearchBar" destination="qef-NN-kZr" id="UOx-8R-pqk"/>
+                        <outlet property="tableView" destination="Bz9-Up-qOR" id="Gim-gj-3vp"/>
                         <segue destination="AMv-Fk-UlF" kind="show" identifier="seferler" id="MeN-gp-Iqf"/>
                     </connections>
                 </viewController>
@@ -272,8 +291,14 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

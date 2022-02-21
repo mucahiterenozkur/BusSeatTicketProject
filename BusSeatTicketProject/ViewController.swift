@@ -6,23 +6,45 @@
 //
 
 import UIKit
+import MapKit
 
 class ViewController: UIViewController {
 
 
     @IBOutlet weak var busImageView: UIImageView!
-    @IBOutlet weak var neredenGidecekTField: UITextField!
-    @IBOutlet weak var nereyeGidecekTField: UITextField!
+//    @IBOutlet weak var neredenGidecekTField: UITextField!
+//    @IBOutlet weak var nereyeGidecekTField: UITextField!
+    
+    @IBOutlet weak var departureSearchBar: UISearchBar!
+    @IBOutlet weak var destinationSearchBar: UISearchBar!
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var cikisNoktasi = ""
     var varisNoktasi = ""
+    
+    var activeTag = 0
+    var mapKitSearch = MKLocalSearchCompleter()
+    var searchResults = [MKLocalSearchCompletion]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //title = "."
-        view.backgroundColor = UIColor(hexString: "#64F5C5")        
+        view.backgroundColor = UIColor(hexString: "#64F5C5")
         busImageView.image = UIImage(named: "person")
+        
+        mapKitSearch.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        departureSearchBar.delegate = self
+        destinationSearchBar.delegate = self
+        
+        departureSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
+        destinationSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
+        tableView.backgroundColor = UIColor(hexString: "#64F5C5")
+        tableView.separatorColor = UIColor(hexString: "#64F5C5")
         
 //        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
 //        imageView?.layer.cornerRadius = 30
@@ -38,8 +60,21 @@ class ViewController: UIViewController {
 //        performSegue(withIdentifier: "seferler", sender: self)
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SeferlerViewController") as! SeferlerViewController
-        vc.cikis = neredenGidecekTField.text!
-        vc.varis = nereyeGidecekTField.text!
+//        vc.cikis = neredenGidecekTField.text!
+//        vc.varis = nereyeGidecekTField.text!
+        
+        if departureSearchBar.text?.contains(", ") != nil {
+            let departure = departureSearchBar.text?.components(separatedBy: ", ")
+            vc.cikis = departure![0]
+        }
+        
+        if destinationSearchBar.text?.contains(", ") != nil {
+            let destination = destinationSearchBar.text?.components(separatedBy: ", ")
+            vc.varis = destination![0]
+        }
+        
+        //vc.cikis = departureSearchBar.text!
+        //vc.varis = destinationSearchBar.text!
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .flipHorizontal
         present(vc, animated: true, completion: nil)
@@ -73,4 +108,64 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 }
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let searchResult = searchResults[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath)
+        //cell.backgroundColor = #colorLiteral(red: 0.93323493, green: 0.9333916306, blue: 0.9332129359, alpha: 1)
+        cell.backgroundColor = UIColor(hexString: "#64F5C5")
+        cell.textLabel?.text = searchResult.title
+        cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let searchResult = searchResults[indexPath.row]
+        
+        if activeTag == 0 {
+            
+            departureSearchBar.text = searchResult.title
+        }
+        
+        else if activeTag == 1 {
+            
+            destinationSearchBar.text = searchResult.title
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        searchResults.removeAll()
+        tableView.reloadData()
+        
+    }
+}
+
+
+extension ViewController: MKLocalSearchCompleterDelegate {
+    
+    func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
+        searchResults = completer.results
+        tableView.reloadData()
+    }
+    
+    
+}
+
+extension ViewController:UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        mapKitSearch.queryFragment = searchText
+        
+        activeTag = searchBar.tag
+    }
+    
+}
+
 
