@@ -67,12 +67,12 @@ class ViewController: UIViewController {
         
         if departureSearchBar.text?.contains(", ") != nil {
             let departure = departureSearchBar.text?.components(separatedBy: ", ")
-            vc.cikis = departure![0]
+            SeferlerViewController.cikis = departure![0]
         }
         
         if destinationSearchBar.text?.contains(", ") != nil {
             let destination = destinationSearchBar.text?.components(separatedBy: ", ")
-            vc.varis = destination![0]
+            SeferlerViewController.varis = destination![0]
         }
         
         //vc.cikis = departureSearchBar.text!

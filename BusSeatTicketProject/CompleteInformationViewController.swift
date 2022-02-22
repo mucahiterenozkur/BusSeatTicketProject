@@ -35,6 +35,11 @@ class CompleteInformationViewController: UIViewController {
     @IBAction func displayTicket(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DisplayTicketViewController") as! DisplayTicketViewController
         
+        vc.nameText = nameTField.text!
+        vc.surnameText = surnameTField.text!
+        vc.idText = tcNoTField.text!
+        vc.seatNumbersText = selectedSeatsLabel.text!
+        
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
         

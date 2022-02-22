@@ -12,8 +12,8 @@ class SeferlerViewController: UIViewController {
     
     
     @IBOutlet var tableView: UITableView!
-    var cikis = ""
-    var varis = ""
+    static var cikis = ""
+    static var varis = ""
     
     var seferler = [SeferModel]()
     
@@ -32,10 +32,10 @@ class SeferlerViewController: UIViewController {
         
         
         
-        seferler.append(SeferModel(firmaImage: "metro", fiyat: "300 TL", cikisNoktasi: cikis, varisNoktasi: varis))
-        seferler.append(SeferModel(firmaImage: "pamukkale", fiyat: "250 TL", cikisNoktasi: cikis, varisNoktasi: varis))
-        seferler.append(SeferModel(firmaImage: "koc", fiyat: "350 TL", cikisNoktasi: cikis, varisNoktasi: varis))
-        seferler.append(SeferModel(firmaImage: "varan", fiyat: "200 TL", cikisNoktasi: cikis, varisNoktasi: varis))
+        seferler.append(SeferModel(firmaImage: "metro", fiyat: "300 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
+        seferler.append(SeferModel(firmaImage: "pamukkale", fiyat: "250 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
+        seferler.append(SeferModel(firmaImage: "koc", fiyat: "350 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
+        seferler.append(SeferModel(firmaImage: "varan", fiyat: "200 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
 //        seferler.append(SeferModel(firmaImage: "ulusoy", fiyat: "200 TL", cikisNoktasi: cikis, varisNoktasi: varis))
 //        seferler.append(SeferModel(firmaImage: "gularas", fiyat: "125 TL", cikisNoktasi: cikis, varisNoktasi: varis))
 //        seferler.append(SeferModel(firmaImage: "unal", fiyat: "175 TL", cikisNoktasi: cikis, varisNoktasi: varis))
