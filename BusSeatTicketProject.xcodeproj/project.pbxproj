@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554D252DEBBB9C960C0C9531 /* Pods_BusSeatTicketProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC9A65D7E115B3A58383086 /* Pods_BusSeatTicketProject.framework */; };
 		A80A04CD27BD1D51005A198B /* SeferlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A04CC27BD1D51005A198B /* SeferlerViewController.swift */; };
 		A80A04D527BD261B005A198B /* SeferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A04D427BD261B005A198B /* SeferModel.swift */; };
 		A80A04D827BD2691005A198B /* SeferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A04D627BD2691005A198B /* SeferCell.swift */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83C04450F113AD480E38E9C6 /* Pods-BusSeatTicketProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusSeatTicketProject.release.xcconfig"; path = "Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject.release.xcconfig"; sourceTree = "<group>"; };
+		9F05ECA48E9DF1CE7A7946D0 /* Pods-BusSeatTicketProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusSeatTicketProject.debug.xcconfig"; path = "Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A80A04CC27BD1D51005A198B /* SeferlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferlerViewController.swift; sourceTree = "<group>"; };
 		A80A04D427BD261B005A198B /* SeferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferModel.swift; sourceTree = "<group>"; };
 		A80A04D627BD2691005A198B /* SeferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeferCell.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		A8CD13F727BC450300296478 /* BilgiVerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilgiVerProtocol.swift; sourceTree = "<group>"; };
 		A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
+		EFC9A65D7E115B3A58383086 /* Pods_BusSeatTicketProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusSeatTicketProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +65,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554D252DEBBB9C960C0C9531 /* Pods_BusSeatTicketProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		237CCA6E7D736606C2FCB681 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F05ECA48E9DF1CE7A7946D0 /* Pods-BusSeatTicketProject.debug.xcconfig */,
+				83C04450F113AD480E38E9C6 /* Pods-BusSeatTicketProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A80A04CE27BD2190005A198B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +104,8 @@
 			children = (
 				A8CD13D427BC3D6600296478 /* BusSeatTicketProject */,
 				A8CD13D327BC3D6600296478 /* Products */,
+				237CCA6E7D736606C2FCB681 /* Pods */,
+				BA2CF72E174EF458A1B5DE67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +153,14 @@
 			path = Structs;
 			sourceTree = "<group>";
 		};
+		BA2CF72E174EF458A1B5DE67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFC9A65D7E115B3A58383086 /* Pods_BusSeatTicketProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8CD13E927BC3D6600296478 /* Build configuration list for PBXNativeTarget "BusSeatTicketProject" */;
 			buildPhases = (
+				BEF599B323BCFED1AEAD1536 /* [CP] Check Pods Manifest.lock */,
 				A8CD13CE27BC3D6600296478 /* Sources */,
 				A8CD13CF27BC3D6600296478 /* Frameworks */,
 				A8CD13D027BC3D6600296478 /* Resources */,
+				074C738C83C180220CAADF7B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +229,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		074C738C83C180220CAADF7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEF599B323BCFED1AEAD1536 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusSeatTicketProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8CD13CE27BC3D6600296478 /* Sources */ = {
@@ -368,6 +437,7 @@
 		};
 		A8CD13EA27BC3D6600296478 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F05ECA48E9DF1CE7A7946D0 /* Pods-BusSeatTicketProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -396,6 +466,7 @@
 		};
 		A8CD13EB27BC3D6600296478 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83C04450F113AD480E38E9C6 /* Pods-BusSeatTicketProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

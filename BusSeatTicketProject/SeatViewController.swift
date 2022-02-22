@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class SeatViewController: UIViewController {
 
@@ -147,7 +148,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
             
-            makeAlert(title: "Satıldı!", message: "Bu koltuk daha önce satıldı.")
+            //makeAlert(title: "Satıldı!", message: "Bu koltuk daha önce satıldı.")
+            SCLAlertView().showInfo("Satıldı.", subTitle: "Bu koltuk daha önce satıldı.", closeButtonTitle: "Tamam")
             
         } else {
             
@@ -162,7 +164,9 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
     private func emptySeatOperations(index: Int, seatNumber: String) -> Bool{
         
         if secilenKoltuklar.count > 4 {
-            makeAlert(title: "Maksimum sayıya eriştin.", message: "Alınabilecek maksimum koltuk sayısı 5.")
+            //makeAlert(title: "Maksimum sayıya eriştin.", message: "Alınabilecek maksimum koltuk sayısı 5.")
+            SCLAlertView().showError("Daha fazla koltuk alamazsın.", subTitle: "Maksimum sayı 5tir.", closeButtonTitle: "Tamam")
+            //SCLAlertView().showError("Daha fazla koltuk alamazsın.", subTitle: "Maksimum sayı 5tir.", closeButtonTitle: "Tamam", timeout: .none, colorStyle: 0xFFFFFF, colorTextButton: 0xFFFFFF, circleIconImage: nil, animationStyle: .topToBottom)
             return false
         } else {
             //secilenKoltuklar.append(index + 1)
