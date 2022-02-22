@@ -30,6 +30,7 @@ class DisplayTicketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(hexString: "#73FF9A")
         nameLabel.text = nameText
         surnameLabel.text = surnameText
         idLabel.text = idText
@@ -51,7 +52,7 @@ class DisplayTicketViewController: UIViewController {
         vcSeat.secilenKoltuklar = []
         
         vc.modalPresentationStyle = .fullScreen
-        //vc.modalTransitionStyle = .partialCurl
+        vc.modalTransitionStyle = .partialCurl
         present(vc, animated: true, completion: nil)
     }
     

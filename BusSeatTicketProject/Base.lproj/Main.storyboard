@@ -49,7 +49,8 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Biletini al!">
                                                     <attributes>
-                                                        <font key="NSFont" size="25" name="ChalkboardSE-Regular"/>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="25" name="Arial-BoldMT"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -493,11 +494,13 @@
                                         <fragment content="Biletini Gör">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <font key="NSFont" size="25" name="ChalkboardSE-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="displayTicket:" destination="mXc-u9-Fg5" eventType="touchUpInside" id="MGy-KA-2f4"/>
@@ -641,11 +644,14 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Ana Sayfaya Dön">
                                             <attributes>
-                                                <font key="NSFont" size="16" name="Helvetica"/>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="25" name="ChalkboardSE-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
+                                    <color key="baseForegroundColor" red="0.2307424247" green="0.46000969409999998" blue="0.68264842029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="goBackToMainMenu:" destination="jK4-33-Xu5" eventType="touchUpInside" id="rOX-vp-NGG"/>

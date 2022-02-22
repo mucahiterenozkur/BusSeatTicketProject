@@ -28,12 +28,12 @@ class StartScreenViewController: UIViewController {
         titleLbl.textColor = UIColor(hexString: "#1E77B3")
         titleLbl.font = UIFont(name: "Chalkboard SE", size: 30)
         
-        //startButton.setTitle("Biletini al!", for: .)
+//        startButton.setTitle("Biletini al!", for: .normal)
         //startButton.backgroundColor = UIColor(hexString: "#FF7373")
         startButton.layer.cornerRadius = 20
         //startButton.setTitleColor(.white, for: .normal)
-        startButton.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 30)
-
+        startButton.titleLabel?.font = UIFont(name: "Comic Sans MS", size: 25)
+        startButton.titleLabel?.font = .systemFont(ofSize: 25, weight: .bold)
     }
     
     

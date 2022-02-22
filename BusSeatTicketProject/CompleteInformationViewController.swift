@@ -23,10 +23,9 @@ class CompleteInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(hexString: "#73FF9A")
-        //imageView.isHidden = true
         selectedSeatsLabel.text = selectedSeats
-        //imageView.backgroundColor = .systemBlue
-        //imageView.layer.cornerRadius = 20
+        imageView.backgroundColor = UIColor(hexString: "#22F261")
+        imageView.layer.cornerRadius = 20
         
         profileImageView.image = UIImage(named: "user")
         
