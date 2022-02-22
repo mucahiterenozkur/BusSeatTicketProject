@@ -147,7 +147,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
             
-            makeAlert(title: "Sold!", message: "This seat has been sold.")
+            makeAlert(title: "Satıldı!", message: "Bu koltuk daha önce satıldı.")
             
         } else {
             
@@ -162,7 +162,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
     private func emptySeatOperations(index: Int, seatNumber: String) -> Bool{
         
         if secilenKoltuklar.count > 4 {
-            makeAlert(title: "You have reached the maximum number.", message: "You can purchase up to 5 seats.")
+            makeAlert(title: "Maksimum sayıya eriştin.", message: "Alınabilecek maksimum koltuk sayısı 5.")
             return false
         } else {
             //secilenKoltuklar.append(index + 1)
@@ -196,7 +196,7 @@ extension SeatViewController {
     
     private func makeAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let okButton = UIAlertAction(title: "Tamam", style: .default, handler: nil)
         
         alert.addAction(okButton)
         
