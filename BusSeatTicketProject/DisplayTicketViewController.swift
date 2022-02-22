@@ -43,5 +43,16 @@ class DisplayTicketViewController: UIViewController {
     }
     
 
+    @IBAction func goBackToMainMenu(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        
+        let vcSeat = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SeatViewController") as! SeatViewController
+        vcSeat.yeniSatilanKoltuklar += [1,3,5,7] //sıkıntı var
+        vcSeat.secilenKoltuklar = []
+        
+        vc.modalPresentationStyle = .fullScreen
+        //vc.modalTransitionStyle = .partialCurl
+        present(vc, animated: true, completion: nil)
+    }
     
 }

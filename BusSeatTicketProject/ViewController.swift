@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var departureSearchBar: UISearchBar!
     @IBOutlet weak var destinationSearchBar: UISearchBar!
-    
-    
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     
     var cikisNoktasi = ""

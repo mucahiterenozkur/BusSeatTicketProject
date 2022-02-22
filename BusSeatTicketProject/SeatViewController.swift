@@ -16,7 +16,7 @@ class SeatViewController: UIViewController {
     
     private var toplamKoltukSayisi = 55
     private var satilanKoltuklar: [Int] = []
-    var yeniSatilanKoltuklar: [Int] = []
+    public var yeniSatilanKoltuklar: [Int] = []
     var secilenKoltuklar: [Int] = []
     
     
@@ -103,7 +103,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             //cell.layer.borderColor = UIColor.black.cgColor
             //cell.layer.borderWidth = 2
            // cell.layer.cornerRadius = 8
-            cell.imageView.image = UIImage(named: "seat")
+            //cell.imageView.image = UIImage(named: "seat")
 
             if isSold(seatNumber: indexPath.row + 1){
                 //cell.backgroundColor = .gray
