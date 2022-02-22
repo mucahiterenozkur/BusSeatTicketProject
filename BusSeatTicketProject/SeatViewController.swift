@@ -76,6 +76,7 @@ class SeatViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DisplayTicketViewController") as! DisplayTicketViewController
         
         vc.modalPresentationStyle = .fullScreen
+        for i in 0..<secilenKoltuklar.count { vc.selectedSeats += "\(secilenKoltuklar[i]) " }
         
         present(vc, animated: true, completion: nil)
     }
@@ -137,9 +138,11 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
         let cell = collectionView.cellForItem(at: indexPath) as? SeatCollectionViewCell //to reach cell
         if cell?.imageView.image == UIImage(named: "seat") {
             
-            if emptySeatOperations(index: indexPath.row){
+            if emptySeatOperations(index: indexPath.row, seatNumber: cell!.seatNumber.text!){
+                print(indexPath.row)
                 //cell?.backgroundColor = .green
                 cell?.imageView.image = UIImage(named: "greenseat")
+                //print(secilenKoltuklar.count)
             }
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
@@ -148,7 +151,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             
         } else {
             
-            if selectedSeatOperations(index: indexPath.row) {
+            if selectedSeatOperations(index: indexPath.row, seatNumber: cell!.seatNumber.text!) {
                 //cell?.backgroundColor = .white
                 cell?.imageView.image = UIImage(named: "seat")
             }
@@ -156,20 +159,22 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
     }
     
-    private func emptySeatOperations(index: Int) -> Bool{
+    private func emptySeatOperations(index: Int, seatNumber: String) -> Bool{
         
         if secilenKoltuklar.count > 4 {
             makeAlert(title: "You have reached the maximum number.", message: "You can purchase up to 5 seats.")
             return false
         } else {
-            secilenKoltuklar.append(index + 1)
+            //secilenKoltuklar.append(index + 1)
+            secilenKoltuklar.append(Int(seatNumber)!)
             return true
         }
     }
     
-    private func selectedSeatOperations(index: Int) -> Bool{
+    private func selectedSeatOperations(index: Int, seatNumber: String) -> Bool{
         secilenKoltuklar.removeAll{
-            $0 == (index + 1)
+            //$0 == (index + 1)
+            $0 == Int(seatNumber)
         }
         return true
     }

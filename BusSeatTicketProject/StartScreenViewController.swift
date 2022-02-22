@@ -24,7 +24,7 @@ class StartScreenViewController: UIViewController {
         bottomView.layer.cornerRadius = 30
         
         titleLbl.numberOfLines = 0
-        titleLbl.text = "Türkiye'nin her şehrine giden otobüsleri sıralayan Benim Otobüsüm'e hoşgeldin! \n Hadi başlayalım!"
+        titleLbl.text = "Dünyanın her şehrine otobüs bileti alabileceğin Benim Otobüsüm'e hoşgeldin! \n Hadi başlayalım!"
         titleLbl.font = UIFont(name: "Chalkboard SE", size: 30)
         
         startButton.setTitle("Biletini al!", for: .normal)
