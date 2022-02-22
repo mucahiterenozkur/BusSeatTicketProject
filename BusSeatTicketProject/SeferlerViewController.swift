@@ -24,11 +24,11 @@ class SeferlerViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.backgroundColor = UIColor(hexString: "#64F5C5")
+        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
         
         
         title = "Seferler"
-        view.backgroundColor = UIColor(hexString: "#64F5C5")
+        view.backgroundColor = UIColor(hexString: "#73FF9A")
         
         
         
@@ -60,8 +60,9 @@ extension SeferlerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "seferCell", for: indexPath) as! SeferCell
 //        cell.backgroundColor = UIColor(hexString: "#64F5C5")
-        cell.backgroundColor = UIColor(hexString: "#FFEA03")
+        cell.backgroundColor = UIColor(hexString: "#FFFF3D")
         cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 20
         
         cell.configure(model: seferler[indexPath.section])
         return cell

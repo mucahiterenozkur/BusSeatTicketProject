@@ -20,18 +20,19 @@ class StartScreenViewController: UIViewController {
         super.viewDidLoad()
 
         backgroundImageView.image = UIImage(named: "world")
-        bottomView.backgroundColor = .white
+        bottomView.backgroundColor = UIColor(hexString: "#73FF9A")
         bottomView.layer.cornerRadius = 30
         
         titleLbl.numberOfLines = 0
         titleLbl.text = "Dünyanın her şehrine otobüs bileti alabileceğin Benim Otobüsüm'e hoşgeldin! \n Hadi başlayalım!"
+        titleLbl.textColor = UIColor(hexString: "#1E77B3")
         titleLbl.font = UIFont(name: "Chalkboard SE", size: 30)
         
-        startButton.setTitle("Biletini al!", for: .normal)
-        startButton.backgroundColor = .green
+        //startButton.setTitle("Biletini al!", for: .)
+        //startButton.backgroundColor = UIColor(hexString: "#FF7373")
         startButton.layer.cornerRadius = 20
-        startButton.setTitleColor(.white, for: .normal)
-        startButton.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 70)
+        //startButton.setTitleColor(.white, for: .normal)
+        startButton.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 30)
 
     }
     

@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //title = "."
-        view.backgroundColor = UIColor(hexString: "#64F5C5")
+        view.backgroundColor = UIColor(hexString: "#73FF9A")
         busImageView.image = UIImage(named: "person")
         
         mapKitSearch.delegate = self
@@ -44,8 +44,9 @@ class ViewController: UIViewController {
         departureSearchBar.backgroundImage = UIImage()
         destinationSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
         destinationSearchBar.backgroundImage = UIImage()
-        tableView.backgroundColor = UIColor(hexString: "#64F5C5")
-        tableView.separatorColor = UIColor(hexString: "#64F5C5")
+        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
+        tableView.separatorColor = UIColor(hexString: "#2DB353")
+        tableView.layer.cornerRadius = 20
         
 //        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
 //        imageView?.layer.cornerRadius = 30
@@ -120,7 +121,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath)
         //cell.backgroundColor = #colorLiteral(red: 0.93323493, green: 0.9333916306, blue: 0.9332129359, alpha: 1)
-        cell.backgroundColor = UIColor(hexString: "#64F5C5")
+        cell.backgroundColor = UIColor(hexString: "#2DB353")
         cell.textLabel?.text = searchResult.title
         cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return cell

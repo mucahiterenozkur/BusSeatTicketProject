@@ -30,6 +30,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tp-Xx-uWn">
                                         <rect key="frame" x="30" y="36" width="356" height="219"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" name="AccentColor"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -46,13 +47,15 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" titleAlignment="center">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Button">
+                                                <fragment content="Biletini al!">
                                                     <attributes>
                                                         <font key="NSFont" size="25" name="ChalkboardSE-Regular"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
+                                            <color key="baseForegroundColor" red="0.2307424247" green="0.46000969409999998" blue="0.68264842029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startButtonAction:" destination="qSe-AM-cAf" eventType="touchUpInside" id="z4G-cR-GNr"/>
@@ -109,7 +112,17 @@
                                     <constraint firstAttribute="height" constant="61" id="ba0-GM-GO5"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Seferleri Gör"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Seferleri Gör">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name="ChalkboardSE-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.2307424247" green="0.46000969409999998" blue="0.68264842029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="seferleriGor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfZ-U0-jbf"/>
                                 </connections>
@@ -278,7 +291,17 @@
                                     <constraint firstAttribute="height" constant="50" id="uFH-aO-hVk"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Satın Al"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Satın Al">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name="ChalkboardSE-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.2307424247" green="0.46000969409999998" blue="0.68264842029999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buyTickets:" destination="Gjc-P5-NlR" eventType="touchUpInside" id="neD-Ub-Flw"/>
                                 </connections>
