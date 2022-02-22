@@ -73,7 +73,7 @@ class SeatViewController: UIViewController {
     
     
     @IBAction func buyTickets(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DisplayTicketViewController") as! DisplayTicketViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteInformationViewController") as! CompleteInformationViewController
         
         vc.modalPresentationStyle = .fullScreen
         for i in 0..<secilenKoltuklar.count { vc.selectedSeats += "\(secilenKoltuklar[i]) " }
