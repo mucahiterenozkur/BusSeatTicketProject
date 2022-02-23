@@ -31,7 +31,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //title = "."
-        view.backgroundColor = UIColor(hexString: "#73FF9A")
+        //view.backgroundColor = UIColor(hexString: "#73FF9A")
+        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         busImageView.image = UIImage(named: "person")
         
         mapKitSearch.delegate = self
@@ -42,8 +43,12 @@ class ViewController: UIViewController {
         
         departureSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
         departureSearchBar.backgroundImage = UIImage()
+        departureSearchBar.searchTextField.font = UIFont(name: "Chalkboard SE", size: 20)
+        
         destinationSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
         destinationSearchBar.backgroundImage = UIImage()
+        destinationSearchBar.searchTextField.font = UIFont(name: "Chalkboard SE", size: 20)
+        
         tableView.backgroundColor = UIColor(hexString: "#73FF9A")
         tableView.separatorColor = UIColor(hexString: "#2DB353")
         tableView.layer.cornerRadius = 20
@@ -146,6 +151,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.backgroundColor = UIColor(hexString: "#2DB353")
         cell.textLabel?.text = searchResult.title
         cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 18)
         return cell
     }
     

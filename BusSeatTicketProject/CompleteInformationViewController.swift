@@ -22,10 +22,15 @@ class CompleteInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(hexString: "#73FF9A")
+        //view.backgroundColor = UIColor(hexString: "#73FF9A")
+        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         selectedSeatsLabel.text = selectedSeats
         imageView.backgroundColor = UIColor(hexString: "#22F261")
         imageView.layer.cornerRadius = 20
+        
+        nameTField.font = UIFont(name: "Chalkboard SE", size: 20)
+        surnameTField.font = UIFont(name: "Chalkboard SE", size: 20)
+        tcNoTField.font = UIFont(name: "Chalkboard SE", size: 20)
         
         profileImageView.image = UIImage(named: "user")
         

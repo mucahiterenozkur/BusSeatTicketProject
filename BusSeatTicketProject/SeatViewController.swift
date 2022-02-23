@@ -33,8 +33,11 @@ class SeatViewController: UIViewController {
 //        collectionView.dataSource = self (did it from code)
 //        collectionView.delegate = self (did it from code)
         
-        collectionView.backgroundColor = UIColor(hexString: "#73FF9A")
-        view.backgroundColor = UIColor(hexString: "#73FF9A")
+        //collectionView.backgroundColor = UIColor(hexString: "#73FF9A")
+        //view.backgroundColor = UIColor(hexString: "#73FF9A")
+        collectionView.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        
         
         pathWayNumber = 2 // CENTER - PASSENGER CAN WALK
         seatNumer = 1  // STARTING NUMBER
@@ -104,6 +107,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seatCell", for: indexPath) as? SeatCollectionViewCell{
             
             let text = busSeatNumDict[indexPath.row]
+            cell.seatNumber.font = UIFont(name: "Chalkboard SE Bold", size: 17)
+            cell.seatNumber.textColor = .black
             
             //cell.layer.borderColor = UIColor.black.cgColor
             //cell.layer.borderWidth = 2

@@ -24,12 +24,12 @@ class SeferlerViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
-        
+        //tableView.backgroundColor = UIColor(hexString: "#73FF9A")
+        tableView.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         
         title = "Seferler"
-        view.backgroundColor = UIColor(hexString: "#73FF9A")
-        
+        //view.backgroundColor = UIColor(hexString: "#73FF9A")
+        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         
         
         seferler.append(SeferModel(firmaImage: "metro", fiyat: "300 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))

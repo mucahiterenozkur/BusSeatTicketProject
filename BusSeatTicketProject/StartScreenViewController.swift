@@ -11,7 +11,6 @@ class StartScreenViewController: UIViewController {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var startButton: UIButton!
     
@@ -20,20 +19,18 @@ class StartScreenViewController: UIViewController {
         super.viewDidLoad()
 
         backgroundImageView.image = UIImage(named: "world")
-        bottomView.backgroundColor = UIColor(hexString: "#73FF9A")
-        bottomView.layer.cornerRadius = 30
-        
+        //view.backgroundColor = UIColor(hexString: "#73FF9A")
+        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        //view.backgroundColor = UIColor(red: 166/255, green: 172/255, blue: 236/255, alpha: 1.0) // purple
         titleLbl.numberOfLines = 0
         titleLbl.text = "Dünyanın her şehrine otobüs bileti alabileceğin Benim Otobüsüm'e hoşgeldin! \n Hadi başlayalım!"
-        titleLbl.textColor = UIColor(hexString: "#1E77B3")
+        //titleLbl.textColor = UIColor(hexString: "#1E77B3")
+        titleLbl.textColor = .white
         titleLbl.font = UIFont(name: "Chalkboard SE", size: 30)
         
-//        startButton.setTitle("Biletini al!", for: .normal)
-        //startButton.backgroundColor = UIColor(hexString: "#FF7373")
+        startButton.titleLabel?.font = UIFont(name: "Chalkboard SE Bold", size: 23)
         startButton.layer.cornerRadius = 20
-        //startButton.setTitleColor(.white, for: .normal)
-        startButton.titleLabel?.font = UIFont(name: "Comic Sans MS", size: 25)
-        startButton.titleLabel?.font = .systemFont(ofSize: 25, weight: .bold)
+        
     }
     
     
