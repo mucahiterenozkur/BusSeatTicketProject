@@ -13,8 +13,8 @@ class OnboardingViewController: UIViewController {
     
     var swiftyOnboard: SwiftyOnboard!
     let colors:[UIColor] = [#colorLiteral(red: 0.9980840087, green: 0.3723873496, blue: 0.4952875376, alpha: 1),#colorLiteral(red: 0.2666860223, green: 0.5116362572, blue: 1, alpha: 1),#colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)]
-    var titleArray: [String] = ["Welcome to Confess!", "It’s completely anonymous", "Say something positive"]
-    var subTitleArray: [String] = ["Confess lets you anonymously\n send confessions to your friends\n and receive confessions from them.", "All confessions sent are\n anonymous. Your friends will only\n know that it came from one of\n their facebook friends.", "Be nice to your friends.\n Send them confessions that\n will make them smile :)"]
+    var titleArray: [String] = ["Benim Otobüsüm'e hoş geldin!", "Fersahlarca seyahat et!", "Anında satın al!"]
+    var subTitleArray: [String] = ["Dünyanın her yerine giden\n otobüslerin biletlerini görebileceğin\n bir uygulamadasın.", "Gitmek istediğin şehri arat\n biletleri listele, firmanı ve koltuklarını seç\n ve işlemini anında tamamla.", "Otogarda beklemekle uğraşma\n biletini uygulamadan al\n ve sıra bekleme :)"]
     
     var gradiant: CAGradientLayer = {
         //Gradiant for the background view
@@ -53,6 +53,13 @@ class OnboardingViewController: UIViewController {
     @objc func handleContinue(sender: UIButton) {
         let index = sender.tag
         swiftyOnboard?.goToPage(index: index + 1, animated: true)
+        
+        if index == 2 {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartScreenViewController") as! StartScreenViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .partialCurl
+            present(vc, animated: true, completion: nil)
+        }
     }
 }
 
@@ -65,16 +72,6 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
     
     func swiftyOnboardBackgroundColorFor(_ swiftyOnboard: SwiftyOnboard, atIndex index: Int) -> UIColor? {
         //Return the background color for the page at index:
-//        let page = SwiftyOnboardPage()
-//        if index == 0 {
-//            page.imageView.image = UIImage(named: "cover")
-//        }
-//        if index == 1 {
-//            page.imageView.image = UIImage(named: "world")
-//        }
-//        if index == 2 {
-//            page.imageView.image = UIImage(named: "landscape")
-//        }
         return colors[index]
     }
     
@@ -83,21 +80,12 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
         
         
         //Set the image on the page:
-        view.imageView.image = UIImage(named: "onboardd\(index)")
+        view.imageView.image = UIImage(named: "onboard\(index)")
         
-//        if index == 0 {
-//                    view.imageView.image = UIImage(named: "cover")
-//                }
-//                if index == 1 {
-//                    view.imageView.image = UIImage(named: "world")
-//                }
-//                if index == 2 {
-//                    view.imageView.image = UIImage(named: "landscape")
-//                }
-//
         //Set the font and color for the labels:
-        view.title.font = UIFont(name: "Lato-Heavy", size: 22)
-        view.subTitle.font = UIFont(name: "Lato-Regular", size: 16)
+        //view.title.font = UIFont(name: "Lato-Heavy", size: 22)
+        view.title.font = UIFont(name: "Chalkboard SE Bold", size: 23)
+        view.subTitle.font = UIFont(name: "Chalkboard SE", size: 18)
         
         //Set the text in the page:
         view.title.text = titleArray[index]
@@ -115,10 +103,10 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
         overlay.continueButton.addTarget(self, action: #selector(handleContinue), for: .touchUpInside)
         
         //Setup for the overlay buttons:
-        overlay.continueButton.titleLabel?.font = UIFont(name: "Lato-Bold", size: 16)
+        overlay.continueButton.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 18)
         overlay.continueButton.setTitleColor(UIColor.white, for: .normal)
         overlay.skipButton.setTitleColor(UIColor.white, for: .normal)
-        overlay.skipButton.titleLabel?.font = UIFont(name: "Lato-Heavy", size: 16)
+        overlay.skipButton.titleLabel?.font = UIFont(name: "Chalkboard SE", size: 18)
         
         //Return the overlay view:
         return overlay
@@ -131,11 +119,11 @@ extension OnboardingViewController: SwiftyOnboardDelegate, SwiftyOnboardDataSour
         overlay.continueButton.tag = Int(position)
         
         if currentPage == 0.0 || currentPage == 1.0 {
-            overlay.continueButton.setTitle("Continue", for: .normal)
-            overlay.skipButton.setTitle("Skip", for: .normal)
+            overlay.continueButton.setTitle("Devam et", for: .normal)
+            overlay.skipButton.setTitle("Geç", for: .normal)
             overlay.skipButton.isHidden = false
         } else {
-            overlay.continueButton.setTitle("Get Started!", for: .normal)
+            overlay.continueButton.setTitle("Hadi Başlayalım!", for: .normal)
             overlay.skipButton.isHidden = true
         }
     }

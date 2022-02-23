@@ -28,7 +28,7 @@
         <!--Start Screen View Controller-->
         <scene sceneID="kBM-J5-xpH">
             <objects>
-                <viewController id="qSe-AM-cAf" customClass="StartScreenViewController" customModule="BusSeatTicketProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartScreenViewController" id="qSe-AM-cAf" customClass="StartScreenViewController" customModule="BusSeatTicketProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1x5-3W-jWw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
