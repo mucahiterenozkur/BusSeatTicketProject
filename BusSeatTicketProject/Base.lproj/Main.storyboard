@@ -43,7 +43,7 @@
                                 <rect key="frame" x="44" y="774" width="326" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Biletini al!">
+                                <buttonConfiguration key="configuration" style="filled" title="Biletini al!" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
                                     <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -103,12 +103,12 @@
                                 <locale key="locale" localeIdentifier="tr_TR"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7au-2K-zse">
-                                <rect key="frame" x="50" y="751" width="314" height="61"/>
+                                <rect key="frame" x="50" y="771" width="326" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="ba0-GM-GO5"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Seferleri Gör">
+                                <buttonConfiguration key="configuration" style="filled" title="Seferleri Gör" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
                                     <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -117,7 +117,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bz9-Up-qOR">
-                                <rect key="frame" x="20" y="527" width="374" height="214"/>
+                                <rect key="frame" x="20" y="527" width="374" height="224"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placeCell" id="AfX-jS-TTy">
@@ -144,14 +144,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7au-2K-zse" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="9mh-be-ppa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7au-2K-zse" secondAttribute="bottom" constant="50" id="GJw-jU-yTl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7au-2K-zse" secondAttribute="bottom" constant="30" id="GJw-jU-yTl"/>
                             <constraint firstItem="6D0-K2-uTj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MKS-FB-rKG"/>
                             <constraint firstItem="qef-NN-kZr" firstAttribute="top" secondItem="6D0-K2-uTj" secondAttribute="bottom" constant="5" id="ML4-8q-O9t"/>
-                            <constraint firstItem="7au-2K-zse" firstAttribute="top" secondItem="Bz9-Up-qOR" secondAttribute="bottom" constant="10" id="Vay-Co-xNH"/>
+                            <constraint firstItem="7au-2K-zse" firstAttribute="top" secondItem="Bz9-Up-qOR" secondAttribute="bottom" constant="20" id="Vay-Co-xNH"/>
                             <constraint firstItem="u7Y-Pq-cYJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xdw-TU-diD"/>
                             <constraint firstItem="Bz9-Up-qOR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ze5-BE-t6t"/>
                             <constraint firstItem="qtk-3u-gYK" firstAttribute="top" secondItem="qef-NN-kZr" secondAttribute="bottom" constant="20" id="aAR-2A-Hd4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7au-2K-zse" secondAttribute="trailing" constant="50" id="b1n-LO-TQO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7au-2K-zse" secondAttribute="trailing" constant="38" id="b1n-LO-TQO"/>
                             <constraint firstItem="6D0-K2-uTj" firstAttribute="top" secondItem="u7Y-Pq-cYJ" secondAttribute="bottom" constant="20" id="giH-s4-89F"/>
                             <constraint firstItem="u7Y-Pq-cYJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ieY-Xz-TWU"/>
                             <constraint firstItem="qtk-3u-gYK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jaz-Aq-Lce"/>
@@ -274,20 +274,6 @@
                                     <outlet property="delegate" destination="Gjc-P5-NlR" id="Zof-qT-J6V"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-qx-9vg">
-                                <rect key="frame" x="20" y="792" width="374" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="uFH-aO-hVk"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Satın Al">
-                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
-                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buyTickets:" destination="Gjc-P5-NlR" eventType="touchUpInside" id="neD-Ub-Flw"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seat" translatesAutoresizingMaskIntoConstraints="NO" id="Zo9-yh-nSI">
                                 <rect key="frame" x="13" y="61" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -339,16 +325,30 @@
                                 <rect key="frame" x="263" y="61" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unw-qx-9vg">
+                                <rect key="frame" x="44" y="785" width="326" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="uFH-aO-hVk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Satın Al" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
+                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buyTickets:" destination="Gjc-P5-NlR" eventType="touchUpInside" id="neD-Ub-Flw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CdX-Q4-Hke"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="bottom" secondItem="Unw-qx-9vg" secondAttribute="bottom" constant="20" id="DmB-sw-qPc"/>
+                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="bottom" secondItem="Unw-qx-9vg" secondAttribute="bottom" constant="16" id="DmB-sw-qPc"/>
                             <constraint firstItem="CdX-Q4-Hke" firstAttribute="bottom" secondItem="Zq2-3i-iRa" secondAttribute="bottom" constant="100" id="K8s-zh-r7B"/>
-                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="trailing" secondItem="Unw-qx-9vg" secondAttribute="trailing" constant="20" id="L8y-sW-uFE"/>
+                            <constraint firstItem="CdX-Q4-Hke" firstAttribute="trailing" secondItem="Unw-qx-9vg" secondAttribute="trailing" constant="44" id="L8y-sW-uFE"/>
                             <constraint firstItem="CdX-Q4-Hke" firstAttribute="trailing" secondItem="Zq2-3i-iRa" secondAttribute="trailing" constant="5" id="Q5M-dO-n4Y"/>
                             <constraint firstItem="Zq2-3i-iRa" firstAttribute="leading" secondItem="CdX-Q4-Hke" secondAttribute="leading" constant="5" id="dfM-Aa-ITB"/>
-                            <constraint firstItem="Unw-qx-9vg" firstAttribute="leading" secondItem="CdX-Q4-Hke" secondAttribute="leading" constant="20" id="kVy-P3-M4I"/>
+                            <constraint firstItem="Unw-qx-9vg" firstAttribute="leading" secondItem="CdX-Q4-Hke" secondAttribute="leading" constant="44" id="kVy-P3-M4I"/>
                             <constraint firstItem="Zq2-3i-iRa" firstAttribute="top" secondItem="CdX-Q4-Hke" secondAttribute="top" constant="100" id="q4Z-q9-Jrt"/>
                         </constraints>
                     </view>
@@ -467,10 +467,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qiv-ho-QN3">
-                                <rect key="frame" x="20" y="788" width="374" height="50"/>
+                                <rect key="frame" x="44" y="772" width="326" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Biletini Gör">
+                                <buttonConfiguration key="configuration" style="filled" title="Biletini Gör" cornerStyle="large">
                                     <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -669,18 +669,6 @@
                                 <rect key="frame" x="92" y="617" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su6-kJ-U2Y">
-                                <rect key="frame" x="25" y="789" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Ana Sayfaya Dön">
-                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
-                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goBackToMainMenu:" destination="jK4-33-Xu5" eventType="touchUpInside" id="rOX-vp-NGG"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v1F-Oh-bJs">
                                 <rect key="frame" x="267" y="438" width="99" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -693,6 +681,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Su6-kJ-U2Y">
+                                <rect key="frame" x="44" y="779" width="326" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ana Sayfaya Dön" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
+                                    <color key="baseBackgroundColor" red="0.93219810719999996" green="0.48382276299999999" blue="0.46744912859999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBackToMainMenu:" destination="jK4-33-Xu5" eventType="touchUpInside" id="rOX-vp-NGG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7JX-1h-IAT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

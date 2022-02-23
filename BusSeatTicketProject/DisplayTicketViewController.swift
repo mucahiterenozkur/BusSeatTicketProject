@@ -58,7 +58,7 @@ class DisplayTicketViewController: UIViewController {
         vcSeat.secilenKoltuklar = []
         
         vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .partialCurl
+        vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
     
