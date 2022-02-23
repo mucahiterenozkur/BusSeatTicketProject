@@ -10,7 +10,6 @@ import UIKit
 
 class SeferlerViewController: UIViewController {
     
-    
     @IBOutlet var tableView: UITableView!
     static var cikis = ""
     static var varis = ""
@@ -25,12 +24,13 @@ class SeferlerViewController: UIViewController {
         tableView.delegate = self
         
         //tableView.backgroundColor = UIColor(hexString: "#73FF9A")
-        tableView.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        //tableView.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        tableView.backgroundColor = UIColor(hexString: "#5EBFFF")
         
         title = "Seferler"
         //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
-        
+        //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        view.backgroundColor = UIColor(hexString: "#5EBFFF")
         
         seferler.append(SeferModel(firmaImage: "metro", fiyat: "300 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
         seferler.append(SeferModel(firmaImage: "pamukkale", fiyat: "250 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
@@ -60,7 +60,8 @@ extension SeferlerViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "seferCell", for: indexPath) as! SeferCell
 //        cell.backgroundColor = UIColor(hexString: "#64F5C5")
-        cell.backgroundColor = UIColor(hexString: "#FFFF3D")
+//        cell.backgroundColor = UIColor(hexString: "#FFFF3D")
+        cell.backgroundColor = .white
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 20
         

@@ -35,9 +35,10 @@ class SeatViewController: UIViewController {
         
         //collectionView.backgroundColor = UIColor(hexString: "#73FF9A")
         //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        collectionView.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
-        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
-        
+//        collectionView.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        collectionView.backgroundColor = UIColor(hexString: "#5EBFFF")
+//        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        view.backgroundColor = UIColor(hexString: "#5EBFFF")
         
         pathWayNumber = 2 // CENTER - PASSENGER CAN WALK
         seatNumer = 1  // STARTING NUMBER

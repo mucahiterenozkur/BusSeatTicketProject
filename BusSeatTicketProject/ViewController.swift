@@ -10,11 +10,7 @@ import MapKit
 
 class ViewController: UIViewController {
 
-
     @IBOutlet weak var busImageView: UIImageView!
-//    @IBOutlet weak var neredenGidecekTField: UITextField!
-//    @IBOutlet weak var nereyeGidecekTField: UITextField!
-    
     @IBOutlet weak var departureSearchBar: UISearchBar!
     @IBOutlet weak var destinationSearchBar: UISearchBar!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -22,7 +18,6 @@ class ViewController: UIViewController {
     
     var cikisNoktasi = ""
     var varisNoktasi = ""
-    
     var activeTag = 0
     var mapKitSearch = MKLocalSearchCompleter()
     var searchResults = [MKLocalSearchCompletion]()
@@ -32,7 +27,8 @@ class ViewController: UIViewController {
         
         //title = "."
         //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        view.backgroundColor = UIColor(hexString: "#5EBFFF")
         busImageView.image = UIImage(named: "person")
         
         mapKitSearch.delegate = self
@@ -49,8 +45,9 @@ class ViewController: UIViewController {
         destinationSearchBar.backgroundImage = UIImage()
         destinationSearchBar.searchTextField.font = UIFont(name: "Chalkboard SE", size: 20)
         
-        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
-        tableView.separatorColor = UIColor(hexString: "#2DB353")
+//        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
+        tableView.backgroundColor = UIColor(hexString: "#45B4FF") //#45B4FF
+        tableView.separatorColor = UIColor(hexString: "#45B4FF")
         tableView.layer.cornerRadius = 20
         
 //        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
@@ -62,42 +59,27 @@ class ViewController: UIViewController {
     
     
     @IBAction func seferleriGor(_ sender: Any) {
-//        self.cikisNoktasi = neredenGidecekTField.text!
-//        self.varisNoktasi = nereyeGidecekTField.text!
-//        performSegue(withIdentifier: "seferler", sender: self)
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SeferlerViewController") as! SeferlerViewController
-//        vc.cikis = neredenGidecekTField.text!
-//        vc.varis = nereyeGidecekTField.text!
         
         if departureSearchBar.text?.contains(", ") != nil {
             let departure = departureSearchBar.text?.components(separatedBy: ", ")
             SeferlerViewController.cikis = departure![0]
         }
-        
         if destinationSearchBar.text?.contains(", ") != nil {
             let destination = destinationSearchBar.text?.components(separatedBy: ", ")
             SeferlerViewController.varis = destination![0]
         }
         
-        
         getDateAndTime()
         
-        //vc.cikis = departureSearchBar.text!
-        //vc.varis = destinationSearchBar.text!
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .flipHorizontal
         present(vc, animated: true, completion: nil)
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//        var vc = segue.destination as! SeferlerViewController
-//        vc.cikis = self.cikisNoktasi
-//        vc.varis = self.varisNoktasi
-//    }
-    
-    
     func getDateAndTime () {
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.string(from: datePicker.date)
@@ -105,17 +87,16 @@ class ViewController: UIViewController {
         let calendar = datePicker.calendar
         let hour = String((calendar?.component(.hour, from: datePicker.date))!)
         var minute = String((calendar?.component(.minute, from: datePicker.date))!)
-        if minute == "0" { minute += "0" }
-        //print("\(hour):\(minute)")
         
+        if minute == "0" { minute += "0" }
         let time = "\(hour):\(minute)"
+        
         Bilet.shared.tarih = date
         Bilet.shared.saat = time
         
         self.view.endEditing(true)
-        //print(date)
+        
     }
-
 }
 
 extension UIColor {
@@ -147,8 +128,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let searchResult = searchResults[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath)
-        //cell.backgroundColor = #colorLiteral(red: 0.93323493, green: 0.9333916306, blue: 0.9332129359, alpha: 1)
-        cell.backgroundColor = UIColor(hexString: "#2DB353")
+        cell.backgroundColor = UIColor(hexString: "#45B4FF")
         cell.textLabel?.text = searchResult.title
         cell.textLabel?.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         cell.textLabel?.font = UIFont(name: "Chalkboard SE", size: 18)
@@ -156,27 +136,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let searchResult = searchResults[indexPath.row]
         
         if activeTag == 0 {
-            
             departureSearchBar.text = searchResult.title
         }
-        
         else if activeTag == 1 {
-            
             destinationSearchBar.text = searchResult.title
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
         searchResults.removeAll()
         tableView.reloadData()
-        
     }
 }
-
 
 extension ViewController: MKLocalSearchCompleterDelegate {
     
@@ -185,14 +158,12 @@ extension ViewController: MKLocalSearchCompleterDelegate {
         tableView.reloadData()
     }
     
-    
 }
 
 extension ViewController:UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         mapKitSearch.queryFragment = searchText
-        
         activeTag = searchBar.tag
     }
     

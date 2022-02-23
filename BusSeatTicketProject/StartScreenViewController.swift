@@ -20,11 +20,11 @@ class StartScreenViewController: UIViewController {
 
         backgroundImageView.image = UIImage(named: "world")
         //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        view.backgroundColor = UIColor(hexString: "#5EBFFF")
+        //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0) // blue
         //view.backgroundColor = UIColor(red: 166/255, green: 172/255, blue: 236/255, alpha: 1.0) // purple
         titleLbl.numberOfLines = 0
         titleLbl.text = "Dünyanın her şehrine otobüs bileti alabileceğin Benim Otobüsüm'e hoşgeldin! \n Hadi başlayalım!"
-        //titleLbl.textColor = UIColor(hexString: "#1E77B3")
         titleLbl.textColor = .white
         titleLbl.font = UIFont(name: "Chalkboard SE", size: 30)
         

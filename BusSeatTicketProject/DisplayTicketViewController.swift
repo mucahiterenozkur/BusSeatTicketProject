@@ -33,7 +33,8 @@ class DisplayTicketViewController: UIViewController {
         super.viewDidLoad()
         
         //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
+        view.backgroundColor = UIColor(hexString: "#5EBFFF")
         nameLabel.text = nameText
         surnameLabel.text = surnameText
         idLabel.text = idText
