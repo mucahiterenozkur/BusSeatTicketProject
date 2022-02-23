@@ -44,9 +44,9 @@ struct Bilet: BilgiVerProtocol {
     }
     
     func yazdir() {
-        print(yolcu)
-        print(tarih)
-        print(saat)
-        print(koltuk)
+        print(yolcu as Any)
+        print(tarih as Any)
+        print(saat as Any)
+        print(koltuk as Any)
     }
 }

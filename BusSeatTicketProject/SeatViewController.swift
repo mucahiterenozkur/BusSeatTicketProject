@@ -15,9 +15,10 @@ class SeatViewController: UIViewController {
     
     
     private var toplamKoltukSayisi = 55
-    private var satilanKoltuklar: [Int] = []
+    public static var satilanKoltuklar: [Int] = []
     public var yeniSatilanKoltuklar: [Int] = []
     var secilenKoltuklar: [Int] = []
+    var koltukNumaralari: [Int] = []
     
     
     var busSeatNumDict = [Int : String]()
@@ -66,7 +67,7 @@ class SeatViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         for koltuk in yeniSatilanKoltuklar {
-            satilanKoltuklar.append(koltuk)
+            SeatViewController.satilanKoltuklar.append(koltuk)
         }
         yeniSatilanKoltuklar.removeAll()
         collectionView.reloadData()
@@ -77,7 +78,11 @@ class SeatViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteInformationViewController") as! CompleteInformationViewController
         
         vc.modalPresentationStyle = .fullScreen
-        for i in 0..<secilenKoltuklar.count { vc.selectedSeats += "\(secilenKoltuklar[i]) " }
+        for i in 0..<secilenKoltuklar.count {
+            vc.selectedSeats += "\(koltukNumaralari[i]) "
+            print(secilenKoltuklar[i])
+            SeatViewController.satilanKoltuklar.append(secilenKoltuklar[i])
+        }
         
         present(vc, animated: true, completion: nil)
     }
@@ -104,14 +109,15 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             //cell.layer.borderWidth = 2
            // cell.layer.cornerRadius = 8
             //cell.imageView.image = UIImage(named: "seat")
-
-            if isSold(seatNumber: indexPath.row + 1){
+            
+            if isSold(seatNumber: indexPath.row){
                 //cell.backgroundColor = .gray
                 cell.imageView.image = UIImage(named: "grayseat")
                 
             } else if isSelected(seatNumber: indexPath.row + 1){
                 //cell.backgroundColor = .green
                 cell.imageView.image = UIImage(named: "greenseat")
+                print(indexPath.row + 1)
             } else {
                 //cell.backgroundColor = .white
                 cell.imageView.image = UIImage(named: "seat")
@@ -144,6 +150,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
                 //cell?.backgroundColor = .green
                 cell?.imageView.image = UIImage(named: "greenseat")
                 //print(secilenKoltuklar.count)
+                secilenKoltuklar.append(indexPath.row)
             }
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
@@ -170,7 +177,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             return false
         } else {
             //secilenKoltuklar.append(index + 1)
-            secilenKoltuklar.append(Int(seatNumber)!)
+            koltukNumaralari.append(Int(seatNumber)!)
             return true
         }
     }
@@ -208,15 +215,16 @@ extension SeatViewController {
     }
     
     private func isSold(seatNumber: Int) -> Bool {
-        
-        for seat in satilanKoltuklar {
+
+        for seat in SeatViewController.satilanKoltuklar {
             if seatNumber == seat {
                 return true
             }
         }
-        
+
         return false
     }
+    
     
     private func isSelected(seatNumber: Int) -> Bool {
         
