@@ -1,16 +1,20 @@
 PODS:
   - SCLAlertView (0.8)
+  - SwiftyOnboard (1.4.0)
 
 DEPENDENCIES:
   - SCLAlertView
+  - SwiftyOnboard
 
 SPEC REPOS:
   trunk:
     - SCLAlertView
+    - SwiftyOnboard
 
 SPEC CHECKSUMS:
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SwiftyOnboard: 76a648dc1dcbc844343b6b95fe5883cb64a62f4a
 
-PODFILE CHECKSUM: 7e8a5bc5485f50e9b44f3d6f177c1067209145c1
+PODFILE CHECKSUM: b48f17052f60d6de4faef994eff97acced8242dd
 
 COCOAPODS: 1.11.2

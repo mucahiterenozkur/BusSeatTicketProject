@@ -7,52 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02687AB61DAD0B9D38B1D586478CEC35 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EA52307C485D0BF342CE922922C68EEB /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		06B65C2F81D1BE1E9B8A4027279AF5A4 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEC1ECAB22745FE0E578B0048892B46 /* SCLExtensions.swift */; };
-		08CEA39B05285510779087CBFB31BD89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		0E53D74D034F2295ADFE4287D4AD3169 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E38CABEF01648AF4891DD7BD2895A55 /* SCLAlertView.swift */; };
-		35039DAD276D50B0828A6537404C1AB6 /* Pods-BusSeatTicketProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C006A2D2E654CE6CF000D1EE7BC9 /* Pods-BusSeatTicketProject-dummy.m */; };
+		02687AB61DAD0B9D38B1D586478CEC35 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F20B3CDDFAF9E6FE51EC532715B2E11 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06B65C2F81D1BE1E9B8A4027279AF5A4 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFDDCD3A826FF46F1CCAEC21DD6F9D5 /* SCLExtensions.swift */; };
+		0E53D74D034F2295ADFE4287D4AD3169 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D41514547CEADA822052647605DABF /* SCLAlertView.swift */; };
+		1CD911A33A0FBD68CB16003A61A2658C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		29E68948A8E85ED60F9585E890070035 /* SwiftyOnboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 63BD4D67178982AB935326D6BAE9E561 /* SwiftyOnboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C4103B1E988E319A06908304785CE72 /* SwiftyOnboard-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5FBFADF08B6AE16D5415827432FB4B /* SwiftyOnboard-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		307DF65644E2EE6B6F851667C954C08B /* SwiftyOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC3DC3417A756647C987115A35E668 /* SwiftyOnboard.swift */; };
 		46C892F73B1BB8E0601A1C3DE3A12E05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A0CC15D24262CBFBB628BAB03C3F9C12 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D22997B39C76A2EDBB9D6C089AE668 /* SCLAlertView-dummy.m */; };
-		B10976809987F03BEA4B2FCA026FBF10 /* Pods-BusSeatTicketProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B99660EC40A42DEFD13BD3D6B57B6D4 /* Pods-BusSeatTicketProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51C0D3616657A2B1F050158498581FA8 /* Pods-BusSeatTicketProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C44C006A2D2E654CE6CF000D1EE7BC9 /* Pods-BusSeatTicketProject-dummy.m */; };
+		706F09D5EBB27AF24F0ED1536673B229 /* SwiftyOnboardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0865B0FC1BF354A50E73DE0405EA4B /* SwiftyOnboardPage.swift */; };
+		A0CC15D24262CBFBB628BAB03C3F9C12 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 729EE9767A31DD7732BC33755C000D74 /* SCLAlertView-dummy.m */; };
+		A3564F01F93E122C49B24124EFD3D338 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D242D644A1592BD6F8424A6CF8DE984C /* SwiftyOnboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C580EF70D74841BA64C216C6645EF2E /* SwiftyOnboard-dummy.m */; };
+		E037FC673549EC7E4E4048C0D529726E /* Pods-BusSeatTicketProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B99660EC40A42DEFD13BD3D6B57B6D4 /* Pods-BusSeatTicketProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4FEC2CB667533D0A9080DE9CFBF602A /* SwiftyOnboardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D0DBE44C56447CA139E8BF5F275BB /* SwiftyOnboardOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4375140AF1A94640AA304EA5842582D0 /* PBXContainerItemProxy */ = {
+		027C9F08DBDABD7D576FBE2FF899ADDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E0152970E5467A11DF89E7D22C63B47C;
 			remoteInfo = SCLAlertView;
 		};
+		F5BC49E8485F98AC22386C3432C96C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B738CAFC7004090B37ECAA9B942BE9D1;
+			remoteInfo = SwiftyOnboard;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5FBFADF08B6AE16D5415827432FB4B /* SwiftyOnboard-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyOnboard-umbrella.h"; sourceTree = "<group>"; };
 		1B99660EC40A42DEFD13BD3D6B57B6D4 /* Pods-BusSeatTicketProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BusSeatTicketProject-umbrella.h"; sourceTree = "<group>"; };
+		1E1A43F53D9C726A2CDB3D590F4A6A29 /* SCLAlertView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.release.xcconfig; sourceTree = "<group>"; };
 		209D90A08813BE500F207A1955A3FAF5 /* Pods-BusSeatTicketProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusSeatTicketProject.release.xcconfig"; sourceTree = "<group>"; };
-		2BBE095B4E20A6C3E9FC9BA1BD53A66E /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		2C580EF70D74841BA64C216C6645EF2E /* SwiftyOnboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyOnboard-dummy.m"; sourceTree = "<group>"; };
 		2C8CFEA1CD18CB3AC127DBEA8F03D9BC /* Pods-BusSeatTicketProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BusSeatTicketProject.modulemap"; sourceTree = "<group>"; };
-		395CBD5CF17CA5D4247F13D06463AD63 /* SCLAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.debug.xcconfig; sourceTree = "<group>"; };
-		41D22997B39C76A2EDBB9D6C089AE668 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
+		32DC3DC3417A756647C987115A35E668 /* SwiftyOnboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyOnboard.swift; path = SwiftyOnboard/SwiftyOnboard.swift; sourceTree = "<group>"; };
+		33BDB56D9E7E652B83116CE9B9A8EBCB /* SCLAlertView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCLAlertView-Info.plist"; sourceTree = "<group>"; };
+		3EFDDCD3A826FF46F1CCAEC21DD6F9D5 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		3F20B3CDDFAF9E6FE51EC532715B2E11 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
 		4C44C006A2D2E654CE6CF000D1EE7BC9 /* Pods-BusSeatTicketProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BusSeatTicketProject-dummy.m"; sourceTree = "<group>"; };
+		4D6F335670257F18922C5F2A4CFEE864 /* SCLAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.debug.xcconfig; sourceTree = "<group>"; };
 		5288792A00654B4757EF2140750198A5 /* Pods-BusSeatTicketProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusSeatTicketProject-acknowledgements.plist"; sourceTree = "<group>"; };
 		565A56FE2545EFCAC4A8E8352A6D52FD /* Pods-BusSeatTicketProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BusSeatTicketProject.debug.xcconfig"; sourceTree = "<group>"; };
 		57194D2ACFBF4657F0F4672B1E089D95 /* Pods-BusSeatTicketProject */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-BusSeatTicketProject"; path = Pods_BusSeatTicketProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		617170B25AFB3F9B9AD0F31A553EDB11 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
-		6E38CABEF01648AF4891DD7BD2895A55 /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		63BD4D67178982AB935326D6BAE9E561 /* SwiftyOnboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyOnboard.h; path = SwiftyOnboard/SwiftyOnboard.h; sourceTree = "<group>"; };
+		67D41514547CEADA822052647605DABF /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
+		729EE9767A31DD7732BC33755C000D74 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		800D0DBE44C56447CA139E8BF5F275BB /* SwiftyOnboardOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyOnboardOverlay.swift; path = SwiftyOnboard/SwiftyOnboardOverlay.swift; sourceTree = "<group>"; };
+		841E0418E27BE015B060E36BDFEE1660 /* SwiftyOnboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyOnboard.modulemap; sourceTree = "<group>"; };
 		962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A41514C63238E8851B0A97FECD6D4661 /* Pods-BusSeatTicketProject-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BusSeatTicketProject-Info.plist"; sourceTree = "<group>"; };
 		A8F571C671E2FA1826B7830B99CD4B92 /* Pods-BusSeatTicketProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BusSeatTicketProject-frameworks.sh"; sourceTree = "<group>"; };
-		AEEC1ECAB22745FE0E578B0048892B46 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		AD0865B0FC1BF354A50E73DE0405EA4B /* SwiftyOnboardPage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyOnboardPage.swift; path = SwiftyOnboard/SwiftyOnboardPage.swift; sourceTree = "<group>"; };
+		AF60B8DFE58EEEAFE44AECA58AF1EB77 /* SwiftyOnboard-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyOnboard-Info.plist"; sourceTree = "<group>"; };
+		B400A63F49F784D89E896233308B715F /* SwiftyOnboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyOnboard.debug.xcconfig; sourceTree = "<group>"; };
+		B4621DEA0E172910AAACC1916D8070FC /* SwiftyOnboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyOnboard-prefix.pch"; sourceTree = "<group>"; };
 		C03F3D4D996CAFE186A665B78DBB443D /* Pods-BusSeatTicketProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BusSeatTicketProject-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E855E17E0E0403D548D3D6ADA7A822D2 /* SCLAlertView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.release.xcconfig; sourceTree = "<group>"; };
-		EA52307C485D0BF342CE922922C68EEB /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
-		F934AFF56C0C0FD91DC2AB138625443E /* SCLAlertView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SCLAlertView-Info.plist"; sourceTree = "<group>"; };
+		C8FDFA5EDA3E140EC80B448113DD7B6E /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		D52E2A45E456303A47F95C020DCFF077 /* SwiftyOnboard */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyOnboard; path = SwiftyOnboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB587C6003EDCDC6A1A1B5E3362497DA /* SwiftyOnboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyOnboard.release.xcconfig; sourceTree = "<group>"; };
+		FEE54F50CAB735293E84220A9E8250A6 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42FDB6EF592FDE315EFA4F81E5E33AFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CD911A33A0FBD68CB16003A61A2658C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81BCC1AFE046591A1789D9C952E1660D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,11 +95,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9306D800E9CDA04A872B2F8EB868F8E /* Frameworks */ = {
+		E63535AA1613AC118C35A58FC2DA0EF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08CEA39B05285510779087CBFB31BD89 /* Foundation.framework in Frameworks */,
+				A3564F01F93E122C49B24124EFD3D338 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,15 +123,14 @@
 			path = "Target Support Files/Pods-BusSeatTicketProject";
 			sourceTree = "<group>";
 		};
-		3909200D2FE9AA3583C4C209C92376C6 /* SCLAlertView */ = {
+		12559B50470C9A72321F53CDF440D7C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E38CABEF01648AF4891DD7BD2895A55 /* SCLAlertView.swift */,
-				AEEC1ECAB22745FE0E578B0048892B46 /* SCLExtensions.swift */,
-				D79F5C60E334BDFCB480426976A4B567 /* Support Files */,
+				57194D2ACFBF4657F0F4672B1E089D95 /* Pods-BusSeatTicketProject */,
+				962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView */,
+				D52E2A45E456303A47F95C020DCFF077 /* SwiftyOnboard */,
 			);
-			name = SCLAlertView;
-			path = SCLAlertView;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -108,21 +141,67 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		65B22470B76EBFFB03EC45025E74B6C8 /* Pods */ = {
+		84A9ADF7D79D3498BE57CAFDE9F423ED /* SwiftyOnboard */ = {
 			isa = PBXGroup;
 			children = (
-				3909200D2FE9AA3583C4C209C92376C6 /* SCLAlertView */,
+				63BD4D67178982AB935326D6BAE9E561 /* SwiftyOnboard.h */,
+				32DC3DC3417A756647C987115A35E668 /* SwiftyOnboard.swift */,
+				800D0DBE44C56447CA139E8BF5F275BB /* SwiftyOnboardOverlay.swift */,
+				AD0865B0FC1BF354A50E73DE0405EA4B /* SwiftyOnboardPage.swift */,
+				B4542FC2334BCEEDBB24AD8CCD798E66 /* Support Files */,
 			);
-			name = Pods;
+			name = SwiftyOnboard;
+			path = SwiftyOnboard;
 			sourceTree = "<group>";
 		};
-		78B3EC777853A50C6889F73770D2A94A /* Products */ = {
+		AA3FDAF397CA02C807B1D92E312E0BD5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				57194D2ACFBF4657F0F4672B1E089D95 /* Pods-BusSeatTicketProject */,
-				962A4B1F73A781D3BB906D0525BD2A8A /* SCLAlertView */,
+				FEE54F50CAB735293E84220A9E8250A6 /* SCLAlertView.modulemap */,
+				729EE9767A31DD7732BC33755C000D74 /* SCLAlertView-dummy.m */,
+				33BDB56D9E7E652B83116CE9B9A8EBCB /* SCLAlertView-Info.plist */,
+				C8FDFA5EDA3E140EC80B448113DD7B6E /* SCLAlertView-prefix.pch */,
+				3F20B3CDDFAF9E6FE51EC532715B2E11 /* SCLAlertView-umbrella.h */,
+				4D6F335670257F18922C5F2A4CFEE864 /* SCLAlertView.debug.xcconfig */,
+				1E1A43F53D9C726A2CDB3D590F4A6A29 /* SCLAlertView.release.xcconfig */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView";
+			sourceTree = "<group>";
+		};
+		B4542FC2334BCEEDBB24AD8CCD798E66 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				841E0418E27BE015B060E36BDFEE1660 /* SwiftyOnboard.modulemap */,
+				2C580EF70D74841BA64C216C6645EF2E /* SwiftyOnboard-dummy.m */,
+				AF60B8DFE58EEEAFE44AECA58AF1EB77 /* SwiftyOnboard-Info.plist */,
+				B4621DEA0E172910AAACC1916D8070FC /* SwiftyOnboard-prefix.pch */,
+				1A5FBFADF08B6AE16D5415827432FB4B /* SwiftyOnboard-umbrella.h */,
+				B400A63F49F784D89E896233308B715F /* SwiftyOnboard.debug.xcconfig */,
+				DB587C6003EDCDC6A1A1B5E3362497DA /* SwiftyOnboard.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyOnboard";
+			sourceTree = "<group>";
+		};
+		B8156B5ED4682A5A94365E3C6CCB9FC5 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				67D41514547CEADA822052647605DABF /* SCLAlertView.swift */,
+				3EFDDCD3A826FF46F1CCAEC21DD6F9D5 /* SCLExtensions.swift */,
+				AA3FDAF397CA02C807B1D92E312E0BD5 /* Support Files */,
+			);
+			name = SCLAlertView;
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		C2E7566DD1ABF78F297B4E6832AFB866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8156B5ED4682A5A94365E3C6CCB9FC5 /* SCLAlertView */,
+				84A9ADF7D79D3498BE57CAFDE9F423ED /* SwiftyOnboard */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -130,8 +209,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				65B22470B76EBFFB03EC45025E74B6C8 /* Pods */,
-				78B3EC777853A50C6889F73770D2A94A /* Products */,
+				C2E7566DD1ABF78F297B4E6832AFB866 /* Pods */,
+				12559B50470C9A72321F53CDF440D7C3 /* Products */,
 				F26A7855ED744C4973B777BB227A555A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -142,21 +221,6 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D79F5C60E334BDFCB480426976A4B567 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				617170B25AFB3F9B9AD0F31A553EDB11 /* SCLAlertView.modulemap */,
-				41D22997B39C76A2EDBB9D6C089AE668 /* SCLAlertView-dummy.m */,
-				F934AFF56C0C0FD91DC2AB138625443E /* SCLAlertView-Info.plist */,
-				2BBE095B4E20A6C3E9FC9BA1BD53A66E /* SCLAlertView-prefix.pch */,
-				EA52307C485D0BF342CE922922C68EEB /* SCLAlertView-umbrella.h */,
-				395CBD5CF17CA5D4247F13D06463AD63 /* SCLAlertView.debug.xcconfig */,
-				E855E17E0E0403D548D3D6ADA7A822D2 /* SCLAlertView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SCLAlertView";
 			sourceTree = "<group>";
 		};
 		F26A7855ED744C4973B777BB227A555A /* Targets Support Files */ = {
@@ -170,11 +234,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8887E64B0F8427F9F6D3686B667FAADA /* Headers */ = {
+		1C60649403D35075053B42E432F3E023 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B10976809987F03BEA4B2FCA026FBF10 /* Pods-BusSeatTicketProject-umbrella.h in Headers */,
+				29E68948A8E85ED60F9585E890070035 /* SwiftyOnboard.h in Headers */,
+				2C4103B1E988E319A06908304785CE72 /* SwiftyOnboard-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAC725216B92E523BE94C9DE7F1FC2CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E037FC673549EC7E4E4048C0D529726E /* Pods-BusSeatTicketProject-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +262,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B738CAFC7004090B37ECAA9B942BE9D1 /* SwiftyOnboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1FE5461FD2394ED6715847F259EB576 /* Build configuration list for PBXNativeTarget "SwiftyOnboard" */;
+			buildPhases = (
+				1C60649403D35075053B42E432F3E023 /* Headers */,
+				46810C924BC2B0AA81BEC4CEB00B37F5 /* Sources */,
+				42FDB6EF592FDE315EFA4F81E5E33AFA /* Frameworks */,
+				C62D77434E58A2D9770321C243F4B9BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyOnboard;
+			productName = SwiftyOnboard;
+			productReference = D52E2A45E456303A47F95C020DCFF077 /* SwiftyOnboard */;
+			productType = "com.apple.product-type.framework";
+		};
 		E0152970E5467A11DF89E7D22C63B47C /* SCLAlertView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BA4190E459520E55CDB9229CC97FDD9 /* Build configuration list for PBXNativeTarget "SCLAlertView" */;
@@ -209,17 +300,18 @@
 		};
 		F29A5A59D8344A9758A4988A132028C6 /* Pods-BusSeatTicketProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49F533389219A2265FF9F8B2A3DFA66A /* Build configuration list for PBXNativeTarget "Pods-BusSeatTicketProject" */;
+			buildConfigurationList = 71376BB29D76B2C5606E1F71E37ECCB3 /* Build configuration list for PBXNativeTarget "Pods-BusSeatTicketProject" */;
 			buildPhases = (
-				8887E64B0F8427F9F6D3686B667FAADA /* Headers */,
-				8754D322E34AAE8A3BE62002B9165954 /* Sources */,
-				F9306D800E9CDA04A872B2F8EB868F8E /* Frameworks */,
-				00F73C444C9185443E74C3C97A0DA8EC /* Resources */,
+				AAC725216B92E523BE94C9DE7F1FC2CB /* Headers */,
+				75405B8B98FD0C32DBD7A77B64A8301B /* Sources */,
+				E63535AA1613AC118C35A58FC2DA0EF3 /* Frameworks */,
+				AF8A5B1100E09F39CD29139CD3C600D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A61A15958905FDF0404680D3044BFBC0 /* PBXTargetDependency */,
+				E2C9125E91DEA9A5EB23AA5A23919A2C /* PBXTargetDependency */,
+				775811B6AF70551FC00E56915A5D5ED7 /* PBXTargetDependency */,
 			);
 			name = "Pods-BusSeatTicketProject";
 			productName = Pods_BusSeatTicketProject;
@@ -244,18 +336,26 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 78B3EC777853A50C6889F73770D2A94A /* Products */;
+			productRefGroup = 12559B50470C9A72321F53CDF440D7C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F29A5A59D8344A9758A4988A132028C6 /* Pods-BusSeatTicketProject */,
 				E0152970E5467A11DF89E7D22C63B47C /* SCLAlertView */,
+				B738CAFC7004090B37ECAA9B942BE9D1 /* SwiftyOnboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00F73C444C9185443E74C3C97A0DA8EC /* Resources */ = {
+		AF8A5B1100E09F39CD29139CD3C600D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C62D77434E58A2D9770321C243F4B9BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,11 +372,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8754D322E34AAE8A3BE62002B9165954 /* Sources */ = {
+		46810C924BC2B0AA81BEC4CEB00B37F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35039DAD276D50B0828A6537404C1AB6 /* Pods-BusSeatTicketProject-dummy.m in Sources */,
+				307DF65644E2EE6B6F851667C954C08B /* SwiftyOnboard.swift in Sources */,
+				D242D644A1592BD6F8424A6CF8DE984C /* SwiftyOnboard-dummy.m in Sources */,
+				F4FEC2CB667533D0A9080DE9CFBF602A /* SwiftyOnboardOverlay.swift in Sources */,
+				706F09D5EBB27AF24F0ED1536673B229 /* SwiftyOnboardPage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75405B8B98FD0C32DBD7A77B64A8301B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51C0D3616657A2B1F050158498581FA8 /* Pods-BusSeatTicketProject-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,15 +404,94 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A61A15958905FDF0404680D3044BFBC0 /* PBXTargetDependency */ = {
+		775811B6AF70551FC00E56915A5D5ED7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyOnboard;
+			target = B738CAFC7004090B37ECAA9B942BE9D1 /* SwiftyOnboard */;
+			targetProxy = F5BC49E8485F98AC22386C3432C96C63 /* PBXContainerItemProxy */;
+		};
+		E2C9125E91DEA9A5EB23AA5A23919A2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SCLAlertView;
 			target = E0152970E5467A11DF89E7D22C63B47C /* SCLAlertView */;
-			targetProxy = 4375140AF1A94640AA304EA5842582D0 /* PBXContainerItemProxy */;
+			targetProxy = 027C9F08DBDABD7D576FBE2FF899ADDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1340CC17C7678C4658BB3BA203F01B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565A56FE2545EFCAC4A8E8352A6D52FD /* Pods-BusSeatTicketProject.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		31D533FA5E2E55D8AC26DF07F12CB750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB587C6003EDCDC6A1A1B5E3362497DA /* SwiftyOnboard.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyOnboard/SwiftyOnboard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyOnboard/SwiftyOnboard-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyOnboard/SwiftyOnboard.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyOnboard;
+				PRODUCT_NAME = SwiftyOnboard;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -370,7 +560,7 @@
 		};
 		9F133C6B20D9ACF9778A04B01E53C740 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 395CBD5CF17CA5D4247F13D06463AD63 /* SCLAlertView.debug.xcconfig */;
+			baseConfigurationReference = 4D6F335670257F18922C5F2A4CFEE864 /* SCLAlertView.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -402,11 +592,10 @@
 			};
 			name = Debug;
 		};
-		CCAEC1194F708E69F12B97614CA74342 /* Release */ = {
+		C5E24BC23324A7B93474C3260E966D02 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 209D90A08813BE500F207A1955A3FAF5 /* Pods-BusSeatTicketProject.release.xcconfig */;
+			baseConfigurationReference = B400A63F49F784D89E896233308B715F /* SwiftyOnboard.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -416,29 +605,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyOnboard/SwiftyOnboard-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyOnboard/SwiftyOnboard-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BusSeatTicketProject/Pods-BusSeatTicketProject.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftyOnboard/SwiftyOnboard.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyOnboard;
+				PRODUCT_NAME = SwiftyOnboard;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		CD85FD90473CFBE797E4264E7BBC70AF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -504,7 +691,7 @@
 		};
 		CE01F342B25FC13242BD24A87FDDDDC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E855E17E0E0403D548D3D6ADA7A822D2 /* SCLAlertView.release.xcconfig */;
+			baseConfigurationReference = 1E1A43F53D9C726A2CDB3D590F4A6A29 /* SCLAlertView.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -537,9 +724,9 @@
 			};
 			name = Release;
 		};
-		D8B2892ECA230E1702C8828157AE9347 /* Debug */ = {
+		DB059632172CF26299F8220A9EFBDC2C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 565A56FE2545EFCAC4A8E8352A6D52FD /* Pods-BusSeatTicketProject.debug.xcconfig */;
+			baseConfigurationReference = 209D90A08813BE500F207A1955A3FAF5 /* Pods-BusSeatTicketProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -569,10 +756,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -586,20 +774,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49F533389219A2265FF9F8B2A3DFA66A /* Build configuration list for PBXNativeTarget "Pods-BusSeatTicketProject" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D8B2892ECA230E1702C8828157AE9347 /* Debug */,
-				CCAEC1194F708E69F12B97614CA74342 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4BA4190E459520E55CDB9229CC97FDD9 /* Build configuration list for PBXNativeTarget "SCLAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F133C6B20D9ACF9778A04B01E53C740 /* Debug */,
 				CE01F342B25FC13242BD24A87FDDDDC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71376BB29D76B2C5606E1F71E37ECCB3 /* Build configuration list for PBXNativeTarget "Pods-BusSeatTicketProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1340CC17C7678C4658BB3BA203F01B96 /* Debug */,
+				DB059632172CF26299F8220A9EFBDC2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1FE5461FD2394ED6715847F259EB576 /* Build configuration list for PBXNativeTarget "SwiftyOnboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5E24BC23324A7B93474C3260E966D02 /* Debug */,
+				31D533FA5E2E55D8AC26DF07F12CB750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

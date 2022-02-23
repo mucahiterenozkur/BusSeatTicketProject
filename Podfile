@@ -8,4 +8,6 @@ target 'BusSeatTicketProject' do
   # Pods for BusSeatTicketProject
 
 pod 'SCLAlertView'
+use_frameworks!
+pod 'SwiftyOnboard'
 end
