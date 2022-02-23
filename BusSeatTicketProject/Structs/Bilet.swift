@@ -8,16 +8,19 @@
 import Foundation
 
 struct Bilet: BilgiVerProtocol {
-    var yolcu: Yolcu
-    var tarih: String
-    var saat: String
-    var koltuk: [Int]
+    
+    static var shared = Bilet()
+    
+    var yolcu: Yolcu?
+    var tarih: String?
+    var saat: String?
+    var koltuk: [Int]?
     var ayirtilanKoltuk = 0
     
     func karsilastir(bilet: Bilet) -> Bool {
-        if !koltuk.isEmpty {
-            for i in 0 ..< bilet.koltuk.count {
-                if koltuk.contains(bilet.koltuk[i]) {
+        if !koltuk!.isEmpty {
+            for i in 0 ..< bilet.koltuk!.count {
+                if koltuk!.contains(bilet.koltuk![i]) {
                     return true
                 }
             }
@@ -28,7 +31,7 @@ struct Bilet: BilgiVerProtocol {
     
     func koltukAyir(koltuk: Int) -> [Int] {
         if ayirtilanKoltuk > 0 {
-            return self.koltuk
+            return self.koltuk!
         } else {
             let tempArray = repeatElement(0, count: koltuk)
             let tempIntArray = tempArray.map{(Int($0))}
@@ -37,7 +40,7 @@ struct Bilet: BilgiVerProtocol {
     }
     
     mutating func koltukEkle(ayirilacakKoltuk: Int) {
-        koltuk.append(ayirilacakKoltuk)
+        koltuk!.append(ayirilacakKoltuk)
     }
     
     func yazdir() {

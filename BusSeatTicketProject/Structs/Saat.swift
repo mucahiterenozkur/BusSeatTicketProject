@@ -8,6 +8,7 @@
 import Foundation
 
 struct Saat: BilgiVerProtocol {
+    
     var saat = 0
     var dakika = 0
     

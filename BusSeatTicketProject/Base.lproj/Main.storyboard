@@ -612,10 +612,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TarihLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gqi-FI-UIa">
-                                <rect key="frame" x="68" y="443" width="98" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TarihLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gqi-FI-UIa">
+                                <rect key="frame" x="68" y="443" width="134" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -627,9 +627,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SaatLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v1F-Oh-bJs">
-                                <rect key="frame" x="245" y="443" width="95" height="27"/>
+                                <rect key="frame" x="245" y="443" width="80" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -683,6 +683,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="gqi-FI-UIa" id="AO6-rS-mRu"/>
                         <outlet property="departureLabel" destination="9DD-Jv-8Lz" id="CgH-Qg-w2v"/>
                         <outlet property="destinationLabel" destination="lyG-fA-310" id="wRS-hK-3VZ"/>
                         <outlet property="idLabel" destination="iA7-AC-wjL" id="uFj-Sy-8Ba"/>
@@ -691,6 +692,7 @@
                         <outlet property="seatNumbersLabel" destination="LZX-ou-ZEC" id="zgv-qr-984"/>
                         <outlet property="surnameLabel" destination="WSL-wd-hAC" id="cmu-T3-ZoW"/>
                         <outlet property="ticketImageView" destination="zUv-jS-Qnw" id="BxB-xV-NzL"/>
+                        <outlet property="timeLabel" destination="v1F-Oh-bJs" id="SsN-jh-79d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hz3-A1-NhV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

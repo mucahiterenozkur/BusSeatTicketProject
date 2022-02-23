@@ -8,6 +8,7 @@
 import Foundation
 
 struct Tarih: BilgiVerProtocol {
+    
     var gun = 1
     var ay = 1
     var yil = 2021

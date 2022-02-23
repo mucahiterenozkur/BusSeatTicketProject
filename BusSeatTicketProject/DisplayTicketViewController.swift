@@ -20,6 +20,8 @@ class DisplayTicketViewController: UIViewController {
     @IBOutlet weak var seatNumbersLabel: UILabel!
     @IBOutlet weak var qrCodeImageView: UIImageView!
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     var nameText = ""
     var surnameText = ""
@@ -37,6 +39,8 @@ class DisplayTicketViewController: UIViewController {
         seatNumbersLabel.text = seatNumbersText
         departureLabel.text = SeferlerViewController.cikis
         destinationLabel.text = SeferlerViewController.varis
+        dateLabel.text = Bilet.shared.tarih
+        timeLabel.text = Bilet.shared.saat
 
         ticketImageView.image = UIImage(named: "ticket")
         qrCodeImageView.image = UIImage(named: "qr")
