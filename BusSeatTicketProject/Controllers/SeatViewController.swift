@@ -73,8 +73,13 @@ class SeatViewController: UIViewController {
             SeatViewController.soldSeats.append(selectedSeats[i])
         }
         
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        if selectedSeats.isEmpty {
+            let string = "#FF7373"
+            SCLAlertView().showError("Koltuk Seç", subTitle: "En az 1 koltuk seçiniz.", closeButtonTitle: "Tamam", colorStyle: UInt(String(string.suffix(6)), radix: 16)!)
+        } else {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
     }
 
 }
@@ -131,7 +136,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             }
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
-            SCLAlertView().showInfo("Satıldı.", subTitle: "Bu koltuk daha önce satıldı.", closeButtonTitle: "Tamam")
+            let string = "#45B4FF"
+            SCLAlertView().showInfo("Satıldı", subTitle: "Bu koltuk daha önce satıldı.", closeButtonTitle: "Tamam", colorStyle: UInt(String(string.suffix(6)), radix: 16)!)
         } else {
             if selectedSeatOperations(index: indexPath.row, seatNumber: cell!.seatNumber.text!) {
                 cell?.imageView.image = UIImage(named: "seat")
@@ -143,7 +149,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     private func emptySeatOperations(index: Int, seatNumber: String) -> Bool{
         if selectedSeats.count > 4 {
-            SCLAlertView().showError("Daha fazla koltuk alamazsın.", subTitle: "Maksimum sayı 5tir.", closeButtonTitle: "Tamam")
+            let string = "#FF7373"
+            SCLAlertView().showError("Daha Fazla Alamazsın", subTitle: "Maksimum alınabilecek koltuk sayısı 5tir.", closeButtonTitle: "Tamam", colorStyle: UInt(String(string.suffix(6)), radix: 16)!)
             return false
         } else {
             return true

@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import SCLAlertView
 
 class ViewController: UIViewController {
 
@@ -66,9 +67,15 @@ class ViewController: UIViewController {
         
         getDateAndTime()
         
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .flipHorizontal
-        present(vc, animated: true, completion: nil)
+        if departureSearchBar.text!.isEmpty || destinationSearchBar.text!.isEmpty {
+            let string = "#FF7373"
+            SCLAlertView().showError("Eksik Bilgi", subTitle: "Çıkış-varış noktalarınızı seçiniz.", closeButtonTitle: "Tamam", colorStyle: UInt(String(string.suffix(6)), radix: 16)!)
+        } else {
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
+            present(vc, animated: true, completion: nil)
+        }
+        
     }
     
     func getDateAndTime () {

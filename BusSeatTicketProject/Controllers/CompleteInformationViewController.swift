@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class CompleteInformationViewController: UIViewController {
-
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
@@ -44,7 +44,14 @@ class CompleteInformationViewController: UIViewController {
         vc.idText = tcNoTField.text!
         vc.seatNumbersText = selectedSeatsLabel.text!
         
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        if nameTField.text!.isEmpty || surnameTField.text!.isEmpty || tcNoTField.text!.isEmpty {
+            let string = "#FF7373"
+            SCLAlertView().showError("Eksik Bilgi", subTitle: "Ad, soyad veya id girilmedi.", closeButtonTitle: "Tamam", colorStyle: UInt(String(string.suffix(6)), radix: 16)!)
+        } else {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+        
+        
     }
 }
