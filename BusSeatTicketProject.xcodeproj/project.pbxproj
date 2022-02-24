@@ -96,6 +96,7 @@
 			children = (
 				A80A04D627BD2691005A198B /* SeferCell.swift */,
 				A80A04D727BD2691005A198B /* SeferCell.xib */,
+				A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -124,16 +125,9 @@
 				A80A04D327BD25FA005A198B /* Cells */,
 				A80A04CE27BD2190005A198B /* Models */,
 				A8CD13EC27BC3E7F00296478 /* Structs */,
-				A8CD13D527BC3D6600296478 /* AppDelegate.swift */,
+				A8DEDB7D27C7CAB500657A90 /* Controllers */,
 				A8CD13D727BC3D6600296478 /* SceneDelegate.swift */,
-				A895422327C6604300DE5E53 /* OnboardingViewController.swift */,
-				A873009027C3BACD00CE7A39 /* StartScreenViewController.swift */,
-				A8CD13D927BC3D6600296478 /* ViewController.swift */,
-				A80A04CC27BD1D51005A198B /* SeferlerViewController.swift */,
-				A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */,
-				A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */,
-				A83C028127C4004000E94CE8 /* CompleteInformationViewController.swift */,
-				A86C936B27C516C500218F03 /* DisplayTicketViewController.swift */,
+				A8CD13D527BC3D6600296478 /* AppDelegate.swift */,
 				A8CD13DB27BC3D6600296478 /* Main.storyboard */,
 				A8CD13E127BC3D6600296478 /* Assets.xcassets */,
 				A8CD13E327BC3D6600296478 /* LaunchScreen.storyboard */,
@@ -153,6 +147,20 @@
 				A8CD13F727BC450300296478 /* GiveInformationProtocol.swift */,
 			);
 			path = Structs;
+			sourceTree = "<group>";
+		};
+		A8DEDB7D27C7CAB500657A90 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A895422327C6604300DE5E53 /* OnboardingViewController.swift */,
+				A873009027C3BACD00CE7A39 /* StartScreenViewController.swift */,
+				A8CD13D927BC3D6600296478 /* ViewController.swift */,
+				A80A04CC27BD1D51005A198B /* SeferlerViewController.swift */,
+				A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */,
+				A83C028127C4004000E94CE8 /* CompleteInformationViewController.swift */,
+				A86C936B27C516C500218F03 /* DisplayTicketViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BA2CF72E174EF458A1B5DE67 /* Frameworks */ = {
