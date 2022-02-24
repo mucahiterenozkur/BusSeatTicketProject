@@ -25,9 +25,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //title = "."
-        //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         view.backgroundColor = UIColor(hexString: "#5EBFFF")
         busImageView.image = UIImage(named: "person")
         
@@ -47,14 +44,9 @@ class ViewController: UIViewController {
         destinationSearchBar.searchTextField.font = UIFont(name: "Chalkboard SE", size: 20)
         destinationSearchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Nereye gideceksiniz?", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         
-//        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
         tableView.backgroundColor = UIColor(hexString: "#45B4FF") //#45B4FF
         tableView.separatorColor = UIColor(hexString: "#45B4FF")
         tableView.layer.cornerRadius = 20
-//        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
-//        imageView?.layer.cornerRadius = 30
-        //imageView.isHidden = true
-
         
     }
     

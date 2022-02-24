@@ -8,10 +8,8 @@
 import UIKit
 
 class DisplayTicketViewController: UIViewController {
-
     
     @IBOutlet weak var ticketImageView: UIImageView!
-    
     @IBOutlet weak var departureLabel: UILabel!
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,7 +17,6 @@ class DisplayTicketViewController: UIViewController {
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var seatNumbersLabel: UILabel!
     @IBOutlet weak var qrCodeImageView: UIImageView!
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -28,13 +25,11 @@ class DisplayTicketViewController: UIViewController {
     var idText = ""
     var seatNumbersText = ""
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //view.backgroundColor = UIColor(hexString: "#73FF9A")
-        //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         view.backgroundColor = UIColor(hexString: "#5EBFFF")
+        
         nameLabel.text = nameText
         surnameLabel.text = surnameText
         idLabel.text = idText
@@ -46,17 +41,11 @@ class DisplayTicketViewController: UIViewController {
 
         ticketImageView.image = UIImage(named: "ticket")
         qrCodeImageView.image = UIImage(named: "qr")
-        
     }
     
-
     @IBAction func goBackToMainMenu(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        
-        let vcSeat = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SeatViewController") as! SeatViewController
-        vcSeat.recentlySoldSeats += [1,3,5,7] //sıkıntı var
-        vcSeat.selectedSeats = []
-        
+
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
