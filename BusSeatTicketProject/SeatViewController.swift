@@ -157,6 +157,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
                 cell?.imageView.image = UIImage(named: "greenseat")
                 //print(secilenKoltuklar.count)
                 secilenKoltuklar.append(indexPath.row)
+                koltukNumaralari.append(Int(cell!.seatNumber.text!)!)
             }
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
@@ -169,6 +170,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             if selectedSeatOperations(index: indexPath.row, seatNumber: cell!.seatNumber.text!) {
                 //cell?.backgroundColor = .white
                 cell?.imageView.image = UIImage(named: "seat")
+                secilenKoltuklar.removeAll(where: { $0 == indexPath.row})
+                koltukNumaralari.removeAll(where: { $0 == Int(cell!.seatNumber.text!)! })
             }
             
         }
@@ -183,7 +186,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             return false
         } else {
             //secilenKoltuklar.append(index + 1)
-            koltukNumaralari.append(Int(seatNumber)!)
+            //koltukNumaralari.append(Int(seatNumber)!)
             return true
         }
     }
