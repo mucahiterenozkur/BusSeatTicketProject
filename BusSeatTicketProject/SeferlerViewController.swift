@@ -11,8 +11,8 @@ import UIKit
 class SeferlerViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    static var cikis = ""
-    static var varis = ""
+    static var departure = ""
+    static var destination = ""
     
     var seferler = [SeferModel]()
     
@@ -32,10 +32,10 @@ class SeferlerViewController: UIViewController {
         //view.backgroundColor = UIColor(red: 69/255, green: 127/255, blue: 202/255, alpha: 1.0)
         view.backgroundColor = UIColor(hexString: "#5EBFFF")
         
-        seferler.append(SeferModel(firmaImage: "metro", fiyat: "300 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
-        seferler.append(SeferModel(firmaImage: "pamukkale", fiyat: "250 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
-        seferler.append(SeferModel(firmaImage: "koc", fiyat: "350 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
-        seferler.append(SeferModel(firmaImage: "varan", fiyat: "200 TL", cikisNoktasi: SeferlerViewController.cikis, varisNoktasi: SeferlerViewController.varis))
+        seferler.append(SeferModel(firmaImage: "metro", fiyat: "300 TL", cikisNoktasi: SeferlerViewController.departure, varisNoktasi: SeferlerViewController.destination))
+        seferler.append(SeferModel(firmaImage: "pamukkale", fiyat: "250 TL", cikisNoktasi: SeferlerViewController.departure, varisNoktasi: SeferlerViewController.destination))
+        seferler.append(SeferModel(firmaImage: "koc", fiyat: "350 TL", cikisNoktasi: SeferlerViewController.departure, varisNoktasi: SeferlerViewController.destination))
+        seferler.append(SeferModel(firmaImage: "varan", fiyat: "200 TL", cikisNoktasi: SeferlerViewController.departure, varisNoktasi: SeferlerViewController.destination))
 //        seferler.append(SeferModel(firmaImage: "ulusoy", fiyat: "200 TL", cikisNoktasi: cikis, varisNoktasi: varis))
 //        seferler.append(SeferModel(firmaImage: "gularas", fiyat: "125 TL", cikisNoktasi: cikis, varisNoktasi: varis))
 //        seferler.append(SeferModel(firmaImage: "unal", fiyat: "175 TL", cikisNoktasi: cikis, varisNoktasi: varis))

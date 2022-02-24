@@ -39,10 +39,10 @@ class DisplayTicketViewController: UIViewController {
         surnameLabel.text = surnameText
         idLabel.text = idText
         seatNumbersLabel.text = seatNumbersText
-        departureLabel.text = SeferlerViewController.cikis
-        destinationLabel.text = SeferlerViewController.varis
-        dateLabel.text = Bilet.shared.tarih
-        timeLabel.text = Bilet.shared.saat
+        departureLabel.text = SeferlerViewController.departure
+        destinationLabel.text = SeferlerViewController.destination
+        dateLabel.text = Ticket.shared.date
+        timeLabel.text = Ticket.shared.time
 
         ticketImageView.image = UIImage(named: "ticket")
         qrCodeImageView.image = UIImage(named: "qr")
@@ -54,8 +54,8 @@ class DisplayTicketViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
         
         let vcSeat = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SeatViewController") as! SeatViewController
-        vcSeat.yeniSatilanKoltuklar += [1,3,5,7] //sıkıntı var
-        vcSeat.secilenKoltuklar = []
+        vcSeat.recentlySoldSeats += [1,3,5,7] //sıkıntı var
+        vcSeat.selectedSeats = []
         
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve

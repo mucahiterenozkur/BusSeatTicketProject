@@ -72,10 +72,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cikisNoktasi" destination="hch-aA-2eS" id="1bt-Sr-rug"/>
-                <outlet property="firmaImage" destination="eA5-VE-Hsj" id="uOP-co-GdT"/>
-                <outlet property="fiyat" destination="eek-HM-N2E" id="R7X-2F-18y"/>
-                <outlet property="varisNoktasi" destination="F4a-GT-tBl" id="Z1E-bx-v8P"/>
+                <outlet property="companyImage" destination="eA5-VE-Hsj" id="uOP-co-GdT"/>
+                <outlet property="departurePoint" destination="hch-aA-2eS" id="1bt-Sr-rug"/>
+                <outlet property="destinationPoint" destination="F4a-GT-tBl" id="Z1E-bx-v8P"/>
+                <outlet property="price" destination="eek-HM-N2E" id="R7X-2F-18y"/>
             </connections>
             <point key="canvasLocation" x="196.37681159420291" y="137.61160714285714"/>
         </tableViewCell>

@@ -9,10 +9,10 @@ import UIKit
 
 class SeferCell: UITableViewCell {
     
-    @IBOutlet weak var cikisNoktasi: UILabel!
-    @IBOutlet weak var varisNoktasi: UILabel!
-    @IBOutlet weak var firmaImage: UIImageView!
-    @IBOutlet weak var fiyat: UILabel!
+    @IBOutlet weak var departurePoint: UILabel!
+    @IBOutlet weak var destinationPoint: UILabel!
+    @IBOutlet weak var companyImage: UIImageView!
+    @IBOutlet weak var price: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,10 +28,10 @@ class SeferCell: UITableViewCell {
     }
     
     func configure(model: SeferModel) {
-        self.cikisNoktasi.text = model.cikisNoktasi
-        self.varisNoktasi.text = model.varisNoktasi
-        self.firmaImage.image = UIImage(named: model.firmaImage)
-        self.fiyat.text = model.fiyat
+        self.departurePoint.text = model.cikisNoktasi
+        self.destinationPoint.text = model.varisNoktasi
+        self.companyImage.image = UIImage(named: model.firmaImage)
+        self.price.text = model.fiyat
         
     }
     

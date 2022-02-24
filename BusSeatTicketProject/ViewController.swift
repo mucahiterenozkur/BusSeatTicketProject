@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
     
-    var cikisNoktasi = ""
-    var varisNoktasi = ""
+    var departurePoint = ""
+    var destinationPoint = ""
     var activeTag = 0
     var mapKitSearch = MKLocalSearchCompleter()
     var searchResults = [MKLocalSearchCompletion]()
@@ -65,11 +65,11 @@ class ViewController: UIViewController {
         
         if departureSearchBar.text?.contains(", ") != nil {
             let departure = departureSearchBar.text?.components(separatedBy: ", ")
-            SeferlerViewController.cikis = departure![0]
+            SeferlerViewController.departure = departure![0]
         }
         if destinationSearchBar.text?.contains(", ") != nil {
             let destination = destinationSearchBar.text?.components(separatedBy: ", ")
-            SeferlerViewController.varis = destination![0]
+            SeferlerViewController.destination = destination![0]
         }
         
         getDateAndTime()
@@ -92,8 +92,8 @@ class ViewController: UIViewController {
         if minute == "0" { minute += "0" }
         let time = "\(hour):\(minute)"
         
-        Bilet.shared.tarih = date
-        Bilet.shared.saat = time
+        Ticket.shared.date = date
+        Ticket.shared.time = time
         
         self.view.endEditing(true)
         

@@ -23,11 +23,11 @@
 		A8CD13E027BC3D6600296478 /* BusSeatTicketProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13DE27BC3D6600296478 /* BusSeatTicketProject.xcdatamodeld */; };
 		A8CD13E227BC3D6600296478 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8CD13E127BC3D6600296478 /* Assets.xcassets */; };
 		A8CD13E527BC3D6600296478 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8CD13E327BC3D6600296478 /* LaunchScreen.storyboard */; };
-		A8CD13EE27BC3E9C00296478 /* Bilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13ED27BC3E9C00296478 /* Bilet.swift */; };
-		A8CD13F027BC425400296478 /* Yolcu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13EF27BC425400296478 /* Yolcu.swift */; };
-		A8CD13F227BC437100296478 /* Tarih.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F127BC437100296478 /* Tarih.swift */; };
-		A8CD13F427BC441900296478 /* Saat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F327BC441900296478 /* Saat.swift */; };
-		A8CD13F827BC450300296478 /* BilgiVerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F727BC450300296478 /* BilgiVerProtocol.swift */; };
+		A8CD13EE27BC3E9C00296478 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13ED27BC3E9C00296478 /* Ticket.swift */; };
+		A8CD13F027BC425400296478 /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13EF27BC425400296478 /* Passenger.swift */; };
+		A8CD13F227BC437100296478 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F127BC437100296478 /* Date.swift */; };
+		A8CD13F427BC441900296478 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F327BC441900296478 /* Time.swift */; };
+		A8CD13F827BC450300296478 /* GiveInformationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CD13F727BC450300296478 /* GiveInformationProtocol.swift */; };
 		A8F8F4FE27BFB46C00D40185 /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */; };
 		A8F8F50227BFB9C800D40185 /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -52,11 +52,11 @@
 		A8CD13E127BC3D6600296478 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8CD13E427BC3D6600296478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8CD13E627BC3D6600296478 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8CD13ED27BC3E9C00296478 /* Bilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bilet.swift; sourceTree = "<group>"; };
-		A8CD13EF27BC425400296478 /* Yolcu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yolcu.swift; sourceTree = "<group>"; };
-		A8CD13F127BC437100296478 /* Tarih.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarih.swift; sourceTree = "<group>"; };
-		A8CD13F327BC441900296478 /* Saat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saat.swift; sourceTree = "<group>"; };
-		A8CD13F727BC450300296478 /* BilgiVerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilgiVerProtocol.swift; sourceTree = "<group>"; };
+		A8CD13ED27BC3E9C00296478 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		A8CD13EF27BC425400296478 /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		A8CD13F127BC437100296478 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		A8CD13F327BC441900296478 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		A8CD13F727BC450300296478 /* GiveInformationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveInformationProtocol.swift; sourceTree = "<group>"; };
 		A8F8F4FD27BFB46C00D40185 /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		A8F8F50127BFB9C800D40185 /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		EFC9A65D7E115B3A58383086 /* Pods_BusSeatTicketProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusSeatTicketProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,11 +146,11 @@
 		A8CD13EC27BC3E7F00296478 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD13ED27BC3E9C00296478 /* Bilet.swift */,
-				A8CD13EF27BC425400296478 /* Yolcu.swift */,
-				A8CD13F127BC437100296478 /* Tarih.swift */,
-				A8CD13F327BC441900296478 /* Saat.swift */,
-				A8CD13F727BC450300296478 /* BilgiVerProtocol.swift */,
+				A8CD13ED27BC3E9C00296478 /* Ticket.swift */,
+				A8CD13EF27BC425400296478 /* Passenger.swift */,
+				A8CD13F127BC437100296478 /* Date.swift */,
+				A8CD13F327BC441900296478 /* Time.swift */,
+				A8CD13F727BC450300296478 /* GiveInformationProtocol.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -282,17 +282,17 @@
 				A8CD13DA27BC3D6600296478 /* ViewController.swift in Sources */,
 				A8F8F50227BFB9C800D40185 /* SeatCollectionViewCell.swift in Sources */,
 				A8CD13E027BC3D6600296478 /* BusSeatTicketProject.xcdatamodeld in Sources */,
-				A8CD13F827BC450300296478 /* BilgiVerProtocol.swift in Sources */,
-				A8CD13F027BC425400296478 /* Yolcu.swift in Sources */,
+				A8CD13F827BC450300296478 /* GiveInformationProtocol.swift in Sources */,
+				A8CD13F027BC425400296478 /* Passenger.swift in Sources */,
 				A80A04D527BD261B005A198B /* SeferModel.swift in Sources */,
 				A80A04CD27BD1D51005A198B /* SeferlerViewController.swift in Sources */,
 				A8CD13D627BC3D6600296478 /* AppDelegate.swift in Sources */,
-				A8CD13F227BC437100296478 /* Tarih.swift in Sources */,
+				A8CD13F227BC437100296478 /* Date.swift in Sources */,
 				A873009127C3BACD00CE7A39 /* StartScreenViewController.swift in Sources */,
 				A895422427C6604300DE5E53 /* OnboardingViewController.swift in Sources */,
 				A86C936C27C516C500218F03 /* DisplayTicketViewController.swift in Sources */,
-				A8CD13EE27BC3E9C00296478 /* Bilet.swift in Sources */,
-				A8CD13F427BC441900296478 /* Saat.swift in Sources */,
+				A8CD13EE27BC3E9C00296478 /* Ticket.swift in Sources */,
+				A8CD13F427BC441900296478 /* Time.swift in Sources */,
 				A8F8F4FE27BFB46C00D40185 /* SeatViewController.swift in Sources */,
 				A8CD13D827BC3D6600296478 /* SceneDelegate.swift in Sources */,
 				A80A04D827BD2691005A198B /* SeferCell.swift in Sources */,

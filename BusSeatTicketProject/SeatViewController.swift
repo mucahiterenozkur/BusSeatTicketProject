@@ -14,16 +14,16 @@ class SeatViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    private var toplamKoltukSayisi = 55
-    public static var satilanKoltuklar: [Int] = []
-    public var yeniSatilanKoltuklar: [Int] = []
-    var secilenKoltuklar: [Int] = []
-    var koltukNumaralari: [Int] = []
+    private var totalSeats = 55
+    public static var soldSeats: [Int] = []
+    public var recentlySoldSeats: [Int] = []
+    var selectedSeats: [Int] = []
+    var seatNumbers: [Int] = []
     
     
     var busSeatNumDict = [Int : String]()
     var pathWayNumber = Int()
-    var seatNumer = Int()
+    var seatNum = Int()
 
     
     
@@ -41,14 +41,14 @@ class SeatViewController: UIViewController {
         view.backgroundColor = UIColor(hexString: "#5EBFFF")
         
         pathWayNumber = 2 // CENTER - PASSENGER CAN WALK
-        seatNumer = 1  // STARTING NUMBER
-        for i in 0...toplamKoltukSayisi{
+        seatNum = 1  // STARTING NUMBER
+        for i in 0...totalSeats{
             
             if i == pathWayNumber // If it s centre, values empty to dictionary
             {
                 if i == 52 {
-                    busSeatNumDict[i] = String(seatNumer)
-                    seatNumer = seatNumer + 1
+                    busSeatNumDict[i] = String(seatNum)
+                    seatNum = seatNum + 1
                 }else {
                     busSeatNumDict[i] = ""
                     pathWayNumber = pathWayNumber + 5 // Position empty - 2,7,12,17,22 ...... like that
@@ -59,8 +59,8 @@ class SeatViewController: UIViewController {
                 
             else
             {
-                busSeatNumDict[i] = String(seatNumer)
-                seatNumer = seatNumer + 1
+                busSeatNumDict[i] = String(seatNum)
+                seatNum = seatNum + 1
             }
 
         }
@@ -70,10 +70,10 @@ class SeatViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        for koltuk in yeniSatilanKoltuklar {
-            SeatViewController.satilanKoltuklar.append(koltuk)
+        for koltuk in recentlySoldSeats {
+            SeatViewController.soldSeats.append(koltuk)
         }
-        yeniSatilanKoltuklar.removeAll()
+        recentlySoldSeats.removeAll()
         collectionView.reloadData()
     }
     
@@ -82,10 +82,10 @@ class SeatViewController: UIViewController {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CompleteInformationViewController") as! CompleteInformationViewController
         
         vc.modalPresentationStyle = .fullScreen
-        for i in 0..<secilenKoltuklar.count {
-            vc.selectedSeats += "\(koltukNumaralari[i]) "
-            print(secilenKoltuklar[i])
-            SeatViewController.satilanKoltuklar.append(secilenKoltuklar[i])
+        for i in 0..<selectedSeats.count {
+            vc.selectedSeats += "\(seatNumbers[i]) "
+            print(selectedSeats[i])
+            SeatViewController.soldSeats.append(selectedSeats[i])
         }
         
         present(vc, animated: true, completion: nil)
@@ -98,7 +98,7 @@ class SeatViewController: UIViewController {
 extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return toplamKoltukSayisi
+        return totalSeats
     }
     
 
@@ -156,8 +156,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
                 //cell?.backgroundColor = .green
                 cell?.imageView.image = UIImage(named: "greenseat")
                 //print(secilenKoltuklar.count)
-                secilenKoltuklar.append(indexPath.row)
-                koltukNumaralari.append(Int(cell!.seatNumber.text!)!)
+                selectedSeats.append(indexPath.row)
+                seatNumbers.append(Int(cell!.seatNumber.text!)!)
             }
             
         } else if cell?.imageView.image == UIImage(named: "grayseat") {
@@ -170,8 +170,8 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
             if selectedSeatOperations(index: indexPath.row, seatNumber: cell!.seatNumber.text!) {
                 //cell?.backgroundColor = .white
                 cell?.imageView.image = UIImage(named: "seat")
-                secilenKoltuklar.removeAll(where: { $0 == indexPath.row})
-                koltukNumaralari.removeAll(where: { $0 == Int(cell!.seatNumber.text!)! })
+                selectedSeats.removeAll(where: { $0 == indexPath.row})
+                seatNumbers.removeAll(where: { $0 == Int(cell!.seatNumber.text!)! })
             }
             
         }
@@ -179,7 +179,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     private func emptySeatOperations(index: Int, seatNumber: String) -> Bool{
         
-        if secilenKoltuklar.count > 4 {
+        if selectedSeats.count > 4 {
             //makeAlert(title: "Maksimum sayıya eriştin.", message: "Alınabilecek maksimum koltuk sayısı 5.")
             SCLAlertView().showError("Daha fazla koltuk alamazsın.", subTitle: "Maksimum sayı 5tir.", closeButtonTitle: "Tamam")
             //SCLAlertView().showError("Daha fazla koltuk alamazsın.", subTitle: "Maksimum sayı 5tir.", closeButtonTitle: "Tamam", timeout: .none, colorStyle: 0xFFFFFF, colorTextButton: 0xFFFFFF, circleIconImage: nil, animationStyle: .topToBottom)
@@ -192,7 +192,7 @@ extension SeatViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     private func selectedSeatOperations(index: Int, seatNumber: String) -> Bool{
-        secilenKoltuklar.removeAll{
+        selectedSeats.removeAll{
             //$0 == (index + 1)
             $0 == Int(seatNumber)
         }
@@ -225,7 +225,7 @@ extension SeatViewController {
     
     private func isSold(seatNumber: Int) -> Bool {
 
-        for seat in SeatViewController.satilanKoltuklar {
+        for seat in SeatViewController.soldSeats {
             if seatNumber == seat {
                 return true
             }
@@ -237,7 +237,7 @@ extension SeatViewController {
     
     private func isSelected(seatNumber: Int) -> Bool {
         
-        for seat in secilenKoltuklar {
+        for seat in selectedSeats {
             if seatNumber == seat {
                 return true
             }

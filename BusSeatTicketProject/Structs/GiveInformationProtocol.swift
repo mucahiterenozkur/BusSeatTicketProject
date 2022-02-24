@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol BilgiVerProtocol {
-    func yazdir ()
+protocol GiveInformationProtocol {
+    func printInformation ()
 }
