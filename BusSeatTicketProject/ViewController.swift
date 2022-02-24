@@ -40,16 +40,17 @@ class ViewController: UIViewController {
         departureSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
         departureSearchBar.backgroundImage = UIImage()
         departureSearchBar.searchTextField.font = UIFont(name: "Chalkboard SE", size: 20)
+        departureSearchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Nereden gideceksiniz?", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         
         destinationSearchBar.barTintColor = UIColor(hexString: "#64F5C5")
         destinationSearchBar.backgroundImage = UIImage()
         destinationSearchBar.searchTextField.font = UIFont(name: "Chalkboard SE", size: 20)
+        destinationSearchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Nereye gideceksiniz?", attributes: [NSAttributedString.Key.foregroundColor : UIColor.darkGray])
         
 //        tableView.backgroundColor = UIColor(hexString: "#73FF9A")
         tableView.backgroundColor = UIColor(hexString: "#45B4FF") //#45B4FF
         tableView.separatorColor = UIColor(hexString: "#45B4FF")
         tableView.layer.cornerRadius = 20
-        
 //        imageView?.backgroundColor = UIColor(hexString: "#F59F89")
 //        imageView?.layer.cornerRadius = 30
         //imageView.isHidden = true
