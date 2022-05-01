@@ -8,7 +8,7 @@ This project aims to simulate a bus travelling app which consists of;<br><br>
 ✔️ SCLAlertView pod, <br>
 ✔️ A page for completing the buy phase, (you enter some informations like id, HES code etc.) <br>
 ✔️ Displaying the bought ticket page, <br><br>
-👉 This was the first project that I made in Turkcell Geleceği Yazanlar Bootcamp.<br> <br>
+👉 This was the first project that I made in Turkcell Geleceği Yazanlar Bootcamp. <br> <br>
 
 
 
